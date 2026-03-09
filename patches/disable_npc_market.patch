@@ -1,0 +1,13 @@
+diff --git a/src/map/clif.cpp b/src/map/clif.cpp
+--- a/src/map/clif.cpp
++++ b/src/map/clif.cpp
+@@
++#if PACKETVER < 20180307
++#define DISABLE_NPC_MARKET
++#endif
++
++#ifdef DISABLE_NPC_MARKET
++#define clif_npc_market_open(...)
++#define clif_npc_market_purchase_ack(...)
++#define clif_parse_NPCMarketPurchase(...)
++#endif
