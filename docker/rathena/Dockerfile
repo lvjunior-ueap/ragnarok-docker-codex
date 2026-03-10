@@ -15,15 +15,17 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /opt
 
-# clone limpo do rAthena
+RUN git config --global core.autocrlf false
+
 RUN git clone https://github.com/rathena/rathena.git
 
 WORKDIR /opt/rathena
 
-# checkout do commit compatível com clientes antigos
-RUN git checkout $(git rev-list -n 1 --before="2016-06-01" master)
+RUN git fetch --all
 
-RUN ./configure
+RUN git reset --hard && git clean -fd && git checkout $(git rev-list -n 1 --before="2016-06-01" master)
+
+RUN ./configure --enable-sql
 RUN make server
 
 COPY docker/rathena/start.sh /start.sh
