@@ -1,31 +1,43 @@
 #!/bin/bash
 
-echo "Configurando conexão com banco..."
+set -e
 
-mkdir -p /opt/rathena/conf/import
+echo "=== Configurando IPs do rAthena ==="
 
-cat <<EOF > /opt/rathena/conf/import/inter_conf.txt
-login_server_ip: db
-login_server_port: 3306
-login_server_id: ${MYSQL_USER}
-login_server_pw: ${MYSQL_PASSWORD}
-login_server_db: ${MYSQL_DATABASE}
-EOF
+CONF_DIR="/datastoresetup/usr-bin-rathena/conf"
 
-echo "Aguardando MariaDB iniciar..."
+cd $CONF_DIR
 
-until mysql -h db -u${MYSQL_USER} -p${MYSQL_PASSWORD} -e "SELECT 1"; do
-  echo "MariaDB ainda não respondeu..."
-  sleep 2
-done
+echo "RO_IP=${RO_IP}"
 
+# char-server → IP que o cliente usa
+sed -i "s/^char_ip:.*/char_ip: ${RO_IP}/" char_athena.conf
 
-cd /opt/rathena
+# map-server → IP que o cliente usa
+sed -i "s/^map_ip:.*/map_ip: ${RO_IP}/" map_athena.conf
 
-echo "Iniciando servidores rAthena..."
+# map-server → comunicação interna com char-server
+sed -i "s/^char_ip:.*/char_ip: ragnarok-server/" map_athena.conf
 
-./login-server &
-./char-server &
-./map-server &
+# char-server → comunicação interna com login-server
+sed -i "s/^login_ip:.*/login_ip: ragnarok-server/" char_athena.conf
 
-wait
+# bind em todas interfaces (Docker)
+sed -i "s/^bind_ip:.*/bind_ip: 0.0.0.0/" char_athena.conf || true
+sed -i "s/^bind_ip:.*/bind_ip: 0.0.0.0/" map_athena.conf || true
+
+echo "=== Configuração aplicada ==="
+
+grep ip char_athena.conf
+grep ip map_athena.conf
+
+echo "=== Iniciando rAthena ==="
+
+cd /
+
+sh launch-athena.sh
+
+echo "=== rAthena iniciado ==="
+
+# manter container vivo mostrando logs
+tail -f /datastore/usr-bin-rathena/log/map-server.log

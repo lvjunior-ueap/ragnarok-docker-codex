@@ -24,4 +24,8 @@ RUN sed -i 's|//login_ip|login_ip|g' /datastoresetup/usr-bin-rathena/conf/char_a
 RUN sed -i 's|//char_ip|char_ip|g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf
 RUN sed -i 's|//map_ip|map_ip|g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf
 
+COPY docker/rathena/start.sh /start.sh
+RUN chmod +x /start.sh
+
+
 CMD ["/bin/bash"]
