@@ -56,6 +56,8 @@ services:
       - "5999:5999"
     depends_on:
       - rathena
+    volumes:
+      - ./data:/opt/roBrowserLegacy/data
 
 
 volumes:

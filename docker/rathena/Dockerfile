@@ -16,4 +16,12 @@ RUN echo 'alias rathena-up="cd / && sh launch-athena.sh"' >> /root/.zshrc
 RUN echo 'alias rathena-down="cd /usr/bin/rathena && sh ./athena-start stop"' >> /root/.zshrc
 RUN echo 'alias rathena-update="cd /usr/bin/rathena && git pull"' >> /root/.zshrc
 
+# Corrigir IPs para Docker networking
+RUN sed -i 's/127.0.0.1/ragnarok-server/g' /datastoresetup/usr-bin-rathena/conf/*.conf
+
+# Garantir que os campos estejam ativos
+RUN sed -i 's|//login_ip|login_ip|g' /datastoresetup/usr-bin-rathena/conf/char_athena.conf
+RUN sed -i 's|//char_ip|char_ip|g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf
+RUN sed -i 's|//map_ip|map_ip|g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf
+
 CMD ["/bin/bash"]

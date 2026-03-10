@@ -1,0 +1,12 @@
+ragnarok-docker/
+ ├ docker
+ │
+ ├ data
+ │   ├ data.grf
+ │   ├ rdata.grf
+ │   ├ sdata.grf
+ │
+ └ docker-compose.yml
+
+colocar aqui os grfs.
+
