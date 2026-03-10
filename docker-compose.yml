@@ -34,20 +34,29 @@ services:
     build:
       context: .
       dockerfile: docker/rathena/Dockerfile
-    image: ragnarok-rathena
     container_name: ragnarok-server
     restart: unless-stopped
-    env_file:
-      - .env
     depends_on:
       - db
-    volumes:
-      - rathena_data:/opt/rathena
     ports:
       - "6900:6900"
       - "6121:6121"
       - "5121:5121"
 
+
+
+  robrowser:
+    build: ./docker/robrowser
+    container_name: robrowser
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8001:8080"
+      - "5999:5999"
+    depends_on:
+      - rathena
+
+
 volumes:
   db_data:
-  rathena_data:

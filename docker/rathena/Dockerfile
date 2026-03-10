@@ -1,36 +1,19 @@
-FROM ubuntu:16.04
+FROM tvoll/ragnadocker
 
 RUN apt-get update && apt-get install -y \
-    build-essential \
     git \
-    cmake \
-    pkg-config \
-    libmysqlclient-dev \
-    mysql-client \
-    zlib1g-dev \
-    libpcre3-dev \
-    libssl-dev \
-    libyaml-dev \
-    nano
+    zsh \
+    nano \
+    vim \
+    curl \
+    sudo \
+    iproute2 \
+    && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /opt
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
-RUN git config --global core.autocrlf false
+RUN echo 'alias rathena-up="cd / && sh launch-athena.sh"' >> /root/.zshrc
+RUN echo 'alias rathena-down="cd /usr/bin/rathena && sh ./athena-start stop"' >> /root/.zshrc
+RUN echo 'alias rathena-update="cd /usr/bin/rathena && git pull"' >> /root/.zshrc
 
-RUN git clone https://github.com/rathena/rathena.git
-
-WORKDIR /opt/rathena
-
-RUN git fetch --all
-
-RUN git reset --hard && git clean -fd && git checkout $(git rev-list -n 1 --before="2016-06-01" master)
-
-RUN ./configure --enable-sql
-RUN make server
-
-COPY docker/rathena/start.sh /start.sh
-RUN chmod +x /start.sh
-
-EXPOSE 6900 6121 5121
-
-CMD ["/start.sh"]
+CMD ["/bin/bash"]
