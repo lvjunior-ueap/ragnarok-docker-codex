@@ -1,10 +1,53 @@
 services:
 
+  db:
+    image: mariadb:10.5
+    container_name: ragnarok-db
+    restart: always
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql-init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: ragnarok-phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    depends_on:
+      - db
+
   rathena:
     build:
       context: .
       dockerfile: docker/rathena/Dockerfile
+    image: ragnarok-rathena
+    container_name: ragnarok-server
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - rathena_data:/opt/rathena
     ports:
       - "6900:6900"
       - "6121:6121"
       - "5121:5121"
+
+volumes:
+  db_data:
+  rathena_data:
