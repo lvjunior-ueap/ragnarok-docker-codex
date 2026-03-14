@@ -7,6 +7,7 @@ RUN apk add --no-cache \
     nodejs \
     npm \
     bash \
+    nano \
     curl \
     gettext
 

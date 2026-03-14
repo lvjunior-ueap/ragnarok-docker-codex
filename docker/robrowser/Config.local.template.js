@@ -1,6 +1,7 @@
 window.ROConfigLocal = {
 
     socketProxy: "ws://${RO_IP}:5999",
+    remoteClient: "",
 
     servers: [{
         display: "Docker Ragnarok",
@@ -18,6 +19,6 @@ window.ROConfigLocal = {
         packetKeys: ${RO_PACKETKEYS}
     }],
 
-    skipServerList: true,
-    skipIntro: true
+    skipServerList: false,
+    skipIntro: false
 };
