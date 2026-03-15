@@ -19,6 +19,6 @@ logs/
 __pycache__/
 *.pyc
 
-# env
+# env files
 .env
 .env.rando
