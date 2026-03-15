@@ -15,136 +15,136 @@
 //==================================================
 /// pay_dun00 - Payon Cave
 //==================================================
-pay_dun00,0,0	monster	Zombie	1862,40,5000
-pay_dun00,0,0	monster	Skeleton	1012,35,5000
-pay_dun00,0,0	monster	Familiar	2464,15,5000
-pay_dun00,0,0	monster	Poporing	2813,15,5000
-pay_dun00,0,0	monster	Red Plant	1078,1735,180000,90000
-pay_dun00,140,140,5,5	monster	Black Mushroom	1084,3175,360000,180000
+pay_dun00,0,0	monster	Zombie	1015,40,5000
+pay_dun00,0,0	monster	Skeleton	1076,35,5000
+pay_dun00,0,0	monster	Familiar	1005,15,5000
+pay_dun00,0,0	monster	Poporing	1031,15,5000
+pay_dun00,0,0	monster	Red Plant	1078,15,180000,90000
+pay_dun00,140,140,5,5	monster	Black Mushroom	1084,3,360000,180000
 
 //==================================================
 // pay_dun01 - Payon Cave
 //==================================================
-pay_dun01,0,0	monster	Soldier Skeleton	1963,50,5000
-pay_dun01,0,0	monster	Archer Skeleton	3442,30,5000
-pay_dun01,0,0	monster	Eggyra	3454,15,5000
-pay_dun01,0,0	monster	Drainliar	1772,5,5000
-pay_dun01,235,54,10,10	monster	Black Mushroom	1084,2553,900000,450000
-pay_dun01,0,0	monster	Red Plant	273278,10,180000,90000
+pay_dun01,0,0	monster	Soldier Skeleton	1028,50,5000
+pay_dun01,0,0	monster	Archer Skeleton	1016,30,5000
+pay_dun01,0,0	monster	Eggyra	1116,15,5000
+pay_dun01,0,0	monster	Drainliar	1111,5,5000
+pay_dun01,235,54,10,10	monster	Black Mushroom	1084,7,900000,450000
+pay_dun01,0,0	monster	Red Plant	1078,10,180000,90000
 
 //==================================================
 // pay_dun02 - Payon Cave
 //==================================================
-pay_dun02,0,0	monster	Soldier Skeleton	2355,45,5000
-pay_dun02,0,0	monster	Munak	1108,40,5000
-pay_dun02,0,0	monster	Bongun	2159,30,5000
-pay_dun02,0,0	monster	Archer Skeleton	1769,20,5000
-pay_dun02,0,0	monster	Poporing	1402,10,5000
-pay_dun02,0,0	monster	Nine Tail	1686,1,5000
-pay_dun02,241317,200	monster	Hydra	1068,1,275000,100000
-pay_dun02,123518,192	monster	Hydra	1068,1,285000,100000
-pay_dun02,265319,199	monster	Hydra	1068,1,300000,100000
-pay_dun02,232420,194	monster	Hydra	1068,1,300000,100000
-pay_dun02,164022,200	monster	Hydra	1068,1,300000,100000
-pay_dun02,300610,190	monster	Hydra	1068,1,300000,100000
-pay_dun02,131410,194	monster	Hydra	1068,1,300000,100000
-pay_dun02,138317,191	monster	Hydra	1068,1,300000,100000
-pay_dun02,176909,193	monster	Hydra	1068,1,300000,100000
-pay_dun02,323718,201	monster	Hydra	1068,1,300000,100000
-pay_dun02,146913,193	monster	Hydra	1068,1,300000,100000
-pay_dun02,131516,196	monster	Hydra	1068,1,300000,100000
-pay_dun02,206712,192	monster	Hydra	1068,1,300000,100000
-pay_dun02,139611,191	monster	Hydra	1068,1,300000,100000
-pay_dun02,229,187683	monster	Mandragora	1020,1,300000,100000
-pay_dun02,227,113284	monster	Mandragora	1020,1,300000,100000
-pay_dun02,227,106285	monster	Mandragora	1020,1,300000,100000
-pay_dun02,235920,203	monster	Hydra	1068,1,300000,100000
-pay_dun02,207417,206	monster	Hydra	1068,1,302000,100000
-pay_dun02,318020,200	monster	Hydra	1068,1,303000,100000
-pay_dun02,261616,199	monster	Hydra	1068,1,306000,100000
-pay_dun02,219518,198	monster	Hydra	1068,1,312000,100000
-pay_dun02,215717,197	monster	Hydra	1068,1,314000,100000
-pay_dun02,350319,196	monster	Hydra	1068,1,315000,100000
-pay_dun02,233913,194	monster	Hydra	1068,1,319000,100000
-pay_dun02,139807,190	monster	Hydra	1068,1,320000,100000
-pay_dun02,185522,197	monster	Hydra	1068,1,321000,100000
-pay_dun02,139019,205	monster	Hydra	1068,1,324000,100000
-pay_dun02,289916,190	monster	Hydra	1068,1,326000,100000
-pay_dun02,165508,191	monster	Hydra	1068,1,332000,100000
-pay_dun02,292518,207	monster	Hydra	1068,1,332000,100000
-pay_dun02,129021,200	monster	Hydra	1068,1,333000,100000
-pay_dun02,113316,205	monster	Hydra	1068,1,345000,100000
-pay_dun02,265009,192	monster	Hydra	1068,1,374000,100000
-pay_dun02,37,243	monster	Black Mushroom	1526084,1,600000,300000
-pay_dun02,111,199,10,10	monster	Black Mushroom	1084,3203,900000,450000
-pay_dun02,110,216,20,10	monster	White Plant	1082,3220,180000,90000
-pay_dun02,114182,84,10,10	monster	White Plant	1082,3,180000,90000
-pay_dun02,197,113,10,10	monster	Red Plant	1078,1504,180000,90000
-pay_dun02,55,253220,10,10	monster	Red Plant	1078,4,180000,90000
+pay_dun02,0,0	monster	Soldier Skeleton	1028,45,5000
+pay_dun02,0,0	monster	Munak	1026,40,5000
+pay_dun02,0,0	monster	Bongun	1188,30,5000
+pay_dun02,0,0	monster	Archer Skeleton	1016,20,5000
+pay_dun02,0,0	monster	Poporing	1031,10,5000
+pay_dun02,0,0	monster	Nine Tail	1180,1,5000
+pay_dun02,117,200	monster	Hydra	1068,1,275000,100000
+pay_dun02,118,192	monster	Hydra	1068,1,285000,100000
+pay_dun02,119,199	monster	Hydra	1068,1,300000,100000
+pay_dun02,120,194	monster	Hydra	1068,1,300000,100000
+pay_dun02,122,200	monster	Hydra	1068,1,300000,100000
+pay_dun02,110,190	monster	Hydra	1068,1,300000,100000
+pay_dun02,110,194	monster	Hydra	1068,1,300000,100000
+pay_dun02,117,191	monster	Hydra	1068,1,300000,100000
+pay_dun02,109,193	monster	Hydra	1068,1,300000,100000
+pay_dun02,118,201	monster	Hydra	1068,1,300000,100000
+pay_dun02,113,193	monster	Hydra	1068,1,300000,100000
+pay_dun02,116,196	monster	Hydra	1068,1,300000,100000
+pay_dun02,112,192	monster	Hydra	1068,1,300000,100000
+pay_dun02,111,191	monster	Hydra	1068,1,300000,100000
+pay_dun02,229,183	monster	Mandragora	1020,1,300000,100000
+pay_dun02,227,184	monster	Mandragora	1020,1,300000,100000
+pay_dun02,227,185	monster	Mandragora	1020,1,300000,100000
+pay_dun02,120,203	monster	Hydra	1068,1,300000,100000
+pay_dun02,117,206	monster	Hydra	1068,1,302000,100000
+pay_dun02,120,200	monster	Hydra	1068,1,303000,100000
+pay_dun02,116,199	monster	Hydra	1068,1,306000,100000
+pay_dun02,118,198	monster	Hydra	1068,1,312000,100000
+pay_dun02,117,197	monster	Hydra	1068,1,314000,100000
+pay_dun02,119,196	monster	Hydra	1068,1,315000,100000
+pay_dun02,113,194	monster	Hydra	1068,1,319000,100000
+pay_dun02,107,190	monster	Hydra	1068,1,320000,100000
+pay_dun02,122,197	monster	Hydra	1068,1,321000,100000
+pay_dun02,119,205	monster	Hydra	1068,1,324000,100000
+pay_dun02,116,190	monster	Hydra	1068,1,326000,100000
+pay_dun02,108,191	monster	Hydra	1068,1,332000,100000
+pay_dun02,118,207	monster	Hydra	1068,1,332000,100000
+pay_dun02,121,200	monster	Hydra	1068,1,333000,100000
+pay_dun02,116,205	monster	Hydra	1068,1,345000,100000
+pay_dun02,109,192	monster	Hydra	1068,1,374000,100000
+pay_dun02,37,243	monster	Black Mushroom	1084,1,600000,300000
+pay_dun02,111,199,10,10	monster	Black Mushroom	1084,7,900000,450000
+pay_dun02,110,216,20,10	monster	White Plant	1082,3,180000,90000
+pay_dun02,132,84,10,10	monster	White Plant	1082,3,180000,90000
+pay_dun02,197,113,10,10	monster	Red Plant	1078,4,180000,90000
+pay_dun02,55,254,10,10	monster	Red Plant	1078,4,180000,90000
 
 //==================================================
 // pay_dun03 - Payon Cave
 //==================================================
-pay_dun03,0,0	monster	Sohee	1478,70,5000
-pay_dun03,0,0	monster	Greatest General	1474,3,5000
-pay_dun03,0,0	monster	Bongun	2146,3,5000
-pay_dun03,0,0	monster	Munak	2667,3,5000
-pay_dun03,0,0	monster	Nine Tail	1543,2,5000
-pay_dun03,240826,135	monster	Mandragora	1020,1,300000,100000
-pay_dun03,285926,134	monster	Mandragora	1020,1,300000,100000
-pay_dun03,156326,133	monster	Mandragora	1020,1,300000,100000
-pay_dun03,152126,132	monster	Mandragora	1020,1,300000,100000
-pay_dun03,253226,131	monster	Mandragora	1020,1,300000,100000
-pay_dun03,282979,133	monster	Mandragora	1020,1,300000,100000
-pay_dun03,300379,132	monster	Mandragora	1020,1,300000,100000
-pay_dun03,113679,134	monster	Mandragora	1020,1,300000,100000
-pay_dun03,225279,131	monster	Mandragora	1020,1,300000,100000
-pay_dun03,220379,130	monster	Mandragora	1020,1,300000,100000
-pay_dun03,73074,67	monster	Hydra	1068,1,600000,300000
-pay_dun03,62,67	monster	Hydra	2289068,1,600000,300000
-pay_dun03,57,65	monster	Hydra	2734068,1,600000,300000
-pay_dun03,64,66	monster	Hydra	1697068,1,600000,300000
-pay_dun03,66,65	monster	Hydra	1660068,1,600000,300000
-pay_dun03,59,64	monster	Hydra	1209068,1,600000,300000
-pay_dun03,68,64	monster	Hydra	2251068,1,600000,300000
-pay_dun03,72044,64	monster	Hydra	1068,1,600000,300000
-pay_dun03,66,63	monster	Hydra	2130068,1,600000,300000
-pay_dun03,69,68	monster	Hydra	1193068,1,600000,300000
-pay_dun03,60,68	monster	Hydra	3223068,1,600000,300000
-pay_dun03,67,69	monster	Hydra	2411068,1,600000,300000
-pay_dun03,67,73249	monster	Hydra	1068,1,600000,300000
-pay_dun03,66,73	monster	Hydra	2535068,1,600000,300000
-pay_dun03,68,72	monster	Hydra	1738068,1,600000,300000
-pay_dun03,63,70	monster	Hydra	2420068,1,600000,300000
-pay_dun03,58,69	monster	Hydra	1285068,1,600000,300000
-pay_dun03,154,112	monster	Whisper	2167,1,1800000
-pay_dun03,84,63	monster	Whisper	2742,1,1800000
-pay_dun03,81,61	monster	Whisper	1138,1,1800000
-pay_dun03,161,117	monster	Whisper	1384,1,1800000
-pay_dun03,89,147	monster	Giant Whisper	2002,1,14400000
-pay_dun03,228,62429	monster	Red Plant	1078,1,600000,300000
-pay_dun03,137538,42	monster	Blue Plant	1079,1,600000,300000
-pay_dun03,270120,186	monster	Green Plant	1080,1,600000,300000
-pay_dun03,88,35	monster	Yellow Plant	1417081,1,600000,300000
-pay_dun03,0,0	monster	Red Plant	1078,2088,180000,90000
-pay_dun02860,246,56,20,20	monster	White Plant	1082,3,180000,90000
-pay_dun03,51612,262,10,4	monster	White Plant	1082,2,180000,90000
+pay_dun03,0,0	monster	Sohee	1170,70,5000
+pay_dun03,0,0	monster	Greatest General	1277,3,5000
+pay_dun03,0,0	monster	Bongun	1188,3,5000
+pay_dun03,0,0	monster	Munak	1026,3,5000
+pay_dun03,0,0	monster	Nine Tail	1180,2,5000
+pay_dun03,126,135	monster	Mandragora	1020,1,300000,100000
+pay_dun03,126,134	monster	Mandragora	1020,1,300000,100000
+pay_dun03,126,133	monster	Mandragora	1020,1,300000,100000
+pay_dun03,126,132	monster	Mandragora	1020,1,300000,100000
+pay_dun03,126,131	monster	Mandragora	1020,1,300000,100000
+pay_dun03,179,133	monster	Mandragora	1020,1,300000,100000
+pay_dun03,179,132	monster	Mandragora	1020,1,300000,100000
+pay_dun03,179,134	monster	Mandragora	1020,1,300000,100000
+pay_dun03,179,131	monster	Mandragora	1020,1,300000,100000
+pay_dun03,179,130	monster	Mandragora	1020,1,300000,100000
+pay_dun03,71,67	monster	Hydra	1068,1,600000,300000
+pay_dun03,62,67	monster	Hydra	1068,1,600000,300000
+pay_dun03,57,65	monster	Hydra	1068,1,600000,300000
+pay_dun03,64,66	monster	Hydra	1068,1,600000,300000
+pay_dun03,66,65	monster	Hydra	1068,1,600000,300000
+pay_dun03,59,64	monster	Hydra	1068,1,600000,300000
+pay_dun03,68,64	monster	Hydra	1068,1,600000,300000
+pay_dun03,71,64	monster	Hydra	1068,1,600000,300000
+pay_dun03,66,63	monster	Hydra	1068,1,600000,300000
+pay_dun03,69,68	monster	Hydra	1068,1,600000,300000
+pay_dun03,60,68	monster	Hydra	1068,1,600000,300000
+pay_dun03,67,69	monster	Hydra	1068,1,600000,300000
+pay_dun03,67,71	monster	Hydra	1068,1,600000,300000
+pay_dun03,66,73	monster	Hydra	1068,1,600000,300000
+pay_dun03,68,72	monster	Hydra	1068,1,600000,300000
+pay_dun03,63,70	monster	Hydra	1068,1,600000,300000
+pay_dun03,58,69	monster	Hydra	1068,1,600000,300000
+pay_dun03,154,112	monster	Whisper	1185,1,1800000
+pay_dun03,84,63	monster	Whisper	1185,1,1800000
+pay_dun03,81,61	monster	Whisper	1185,1,1800000
+pay_dun03,161,117	monster	Whisper	1185,1,1800000
+pay_dun03,89,147	monster	Giant Whisper	1186,1,14400000
+pay_dun03,228,61	monster	Red Plant	1078,1,600000,300000
+pay_dun03,138,42	monster	Blue Plant	1079,1,600000,300000
+pay_dun03,120,186	monster	Green Plant	1080,1,600000,300000
+pay_dun03,88,35	monster	Yellow Plant	1081,1,600000,300000
+pay_dun03,0,0	monster	Red Plant	1078,15,180000,90000
+pay_dun03,246,56,20,20	monster	White Plant	1082,3,180000,90000
+pay_dun03,52,262,10,4	monster	White Plant	1082,2,180000,90000
 
 //==================================================
 // pay_dun04 - Payon Cave
 //==================================================
-pay_dun04,0,0	monster	Dokebi	1745,40,5000
-pay_dun04,0,0	monster	Nine Tail	2848,30,5000
-pay_dun04,0,0	monster	Horong	2763,30,5000
-pay_dun04,0,0	monster	Archer Skeleton	2747,15,5000
-pay_dun04,0,0	monster	Greatest General	1418,15,5000
-pay_dun04,0,0	monster	Am Mut	1488,1,5000
-pay_dun04,0,0	monster	Skeleton General	2903,1,5000
-pay_dun04,120,115,0,0	boss_monster	Moonlight Flower	1150,1,1038,600000,1
-pay_dun04,120,115	monster	Cat o' Nine Tails	1307,1,2132,7200000,1
-pay_dun04,180720,120,10,10	monster	Shining Plant	1083,1,1800000,900000
-pay_dun04,28,210410,5,5	monster	Shining Plant	1083,1,1800000,900000
-pay_dun04,0,0	monster	Red Plant	293478,10,180000,90000
-pay_dun04,107,274406,5,5	monster	White Plant	1082,2,180000,90000
-pay_dun04,23158,110,10,10	monster	White Plant	1082,2,180000,90000
-pay_dun04,190,168007,5,5	monster	White Plant	1082,2,180000,90000
+pay_dun04,0,0	monster	Dokebi	1110,40,5000
+pay_dun04,0,0	monster	Nine Tail	1180,30,5000
+pay_dun04,0,0	monster	Horong	1129,30,5000
+pay_dun04,0,0	monster	Archer Skeleton	1016,15,5000
+pay_dun04,0,0	monster	Greatest General	1277,15,5000
+pay_dun04,0,0	monster	Am Mut	1301,1,5000
+pay_dun04,0,0	monster	Skeleton General	1290,1,5000
+pay_dun04,120,115,0,0	boss_monster	Moonlight Flower	1150,1,3600000,600000,1
+pay_dun04,120,115	monster	Cat o' Nine Tails	1307,1,3600000,7200000,1
+pay_dun04,120,120,10,10	monster	Shining Plant	1083,1,1800000,900000
+pay_dun04,28,110,5,5	monster	Shining Plant	1083,1,1800000,900000
+pay_dun04,0,0	monster	Red Plant	1078,10,180000,90000
+pay_dun04,107,206,5,5	monster	White Plant	1082,2,180000,90000
+pay_dun04,28,110,10,10	monster	White Plant	1082,2,180000,90000
+pay_dun04,190,207,5,5	monster	White Plant	1082,2,180000,90000

@@ -15,138 +15,138 @@
 //==================================================
 // prt_fild00 - Prontera Field
 //==================================================
-prt_fild00,0,0	monster	Roda Frog	2253,130,5000
-prt_fild00,0,0	monster	Ambernite	1582,50,5000
-prt_fild00,0,0	monster	Savage Babe	1910,20,5000
-prt_fild00,227,212912	monster	Shining Plant	1083,1,1800000,900000
-prt_fild00,281869,138,10,10	monster	Green Plant	1080,5,360000,180000
+prt_fild00,0,0	monster	Roda Frog	1012,130,5000
+prt_fild00,0,0	monster	Ambernite	1094,50,5000
+prt_fild00,0,0	monster	Savage Babe	1167,20,5000
+prt_fild00,227,212	monster	Shining Plant	1083,1,1800000,900000
+prt_fild00,285,138,10,10	monster	Green Plant	1080,5,360000,180000
 
 //==================================================
 // prt_fild01 - Prontera Field
 //==================================================
-prt_fild01,0,0	monster	Lunatic	1253,140,5000
-prt_fild01,0,0	monster	Poring	1278,30,5000
-prt_fild01,0,0	monster	Fabre	1955,30,5000
-prt_fild01,199,266,1982,3	monster	Green Plant	1080,3,360000,180000
-prt_fild01658,199,266,3,3	monster	Blue Plant	1079,1,900000,450000
+prt_fild01,0,0	monster	Lunatic	1063,140,5000
+prt_fild01,0,0	monster	Poring	1002,30,5000
+prt_fild01,0,0	monster	Fabre	1007,30,5000
+prt_fild01,199,266,3,3	monster	Green Plant	1080,3,360000,180000
+prt_fild01,199,266,3,3	monster	Blue Plant	1079,1,900000,450000
 
 //==================================================
 // prt_fild02 - Prontera Field
 //==================================================
-prt_fild02,0,0	monster	Stainer	1243,140,5000
-prt_fild02,0,0	monster	Creamy	2872,30,5000
-prt_fild02,0,0	monster	Poporing	1060,30,5000
-prt_fild02,0,0	monster	Eclipse	1472093,1,1800000,1200000
-prt_fild02,339,309,3,3	monster	Shining Plant	1640083,1,1800000,900000
-prt_fild01882,0,0	monster	Shining Plant	1083,2,1800000,900000
+prt_fild02,0,0	monster	Stainer	1174,140,5000
+prt_fild02,0,0	monster	Creamy	1018,30,5000
+prt_fild02,0,0	monster	Poporing	1031,30,5000
+prt_fild02,0,0	monster	Eclipse	1093,1,1800000,1200000
+prt_fild02,339,309,3,3	monster	Shining Plant	1083,1,1800000,900000
+prt_fild02,0,0	monster	Shining Plant	1083,2,1800000,900000
 
 //==================================================
 // prt_fild03 - Prontera Field
 //==================================================
-prt_fild03,0,0	monster	Yoyo	1628,100,5000
-prt_fild03,0,0	monster	Poporing	2464,30,5000
-prt_fild03,0,0	monster	Horn	1629,30,5000
-prt_fild03,0,0	monster	Choco	1686,1,5000
-prt_fild03,296,28848,15,15	monster	Green Plant	1080,5,180000,90000
-prt_fild03,111296,58,15,15	monster	Blue Plant	1079,2,900000,450000
-prt_fild03,307,71385,5,5	monster	Green Plant	1080,5,360000,180000
-prt_fild03,147,219,1806,5	monster	Green Plant	1080,5,360000,180000
-prt_fild03,148,107,1302,5	monster	Green Plant	1080,5,360000,180000
+prt_fild03,0,0	monster	Yoyo	1057,100,5000
+prt_fild03,0,0	monster	Poporing	1031,30,5000
+prt_fild03,0,0	monster	Horn	1128,30,5000
+prt_fild03,0,0	monster	Choco	1214,1,5000
+prt_fild03,296,58,15,15	monster	Green Plant	1080,5,180000,90000
+prt_fild03,296,58,15,15	monster	Blue Plant	1079,2,900000,450000
+prt_fild03,307,75,5,5	monster	Green Plant	1080,5,360000,180000
+prt_fild03,147,219,5,5	monster	Green Plant	1080,5,360000,180000
+prt_fild03,148,107,5,5	monster	Green Plant	1080,5,360000,180000
 
 //==================================================
 // prt_fild04 - Prontera Field
 //==================================================
-prt_fild04,0,0	monster	Ambernite	1426,80,5000
-prt_fild04,0,0	monster	Roda Frog	1644,20,5000
-prt_fild04,0,0	monster	Vocal	1135088,1,1800000,1200000
-prt_fild04,317160,114,10,10	monster	Green Plant	1080,5,900000,450000
+prt_fild04,0,0	monster	Ambernite	1094,80,5000
+prt_fild04,0,0	monster	Roda Frog	1012,20,5000
+prt_fild04,0,0	monster	Vocal	1088,1,1800000,1200000
+prt_fild04,350,114,10,10	monster	Green Plant	1080,5,900000,450000
 
 //==================================================
 // prt_fild05 - Prontera Field
 //==================================================
-prt_fild05,0,0	monster	Hornet	1247,140,5000
-prt_fild05,0,0	monster	Thief Bug Egg	1523,30,5000
-prt_fild05,0,0	monster	Thief Bug	1802,30,5000
-prt_fild05,208,37,10,10	monster	Green Plant	1080,2820,900000,450000
-prt_fild05,208,37,28910,10	monster	Blue Plant	1079,1,900000,450000
+prt_fild05,0,0	monster	Hornet	1004,140,5000
+prt_fild05,0,0	monster	Thief Bug Egg	1048,30,5000
+prt_fild05,0,0	monster	Thief Bug	1051,30,5000
+prt_fild05,208,37,10,10	monster	Green Plant	1080,6,900000,450000
+prt_fild05,208,37,10,10	monster	Blue Plant	1079,1,900000,450000
 
 //==================================================
 // prt_fild06 - Prontera Field
 //==================================================
-prt_fild06,0,0	monster	Fabre	1009,140,5000
-prt_fild06,0,0	monster	Poring	2252,30,5000
-prt_fild06,0,0	monster	Lunatic	2888,30,5000
-prt_fild06,222,30,40,10	monster	Green Plant	1080,1563,900000,450000
+prt_fild06,0,0	monster	Fabre	1007,140,5000
+prt_fild06,0,0	monster	Poring	1002,30,5000
+prt_fild06,0,0	monster	Lunatic	1063,30,5000
+prt_fild06,222,30,40,10	monster	Green Plant	1080,15,900000,450000
 
 //==================================================
 // prt_fild07 - Prontera Field
 //==================================================
-prt_fild07,0,0	monster	Rocker	2152,150,5000
-prt_fild07,0,0	monster	Savage Babe	1802,50,5000
-prt_fild07,0,0	monster	Vocal	1121088,1,1800000,1200000
-prt_fild07,225,110,5,5	monster	Black Mushroom	1084,1540,360000,180000
+prt_fild07,0,0	monster	Rocker	1052,150,5000
+prt_fild07,0,0	monster	Savage Babe	1167,50,5000
+prt_fild07,0,0	monster	Vocal	1088,1,1800000,1200000
+prt_fild07,225,110,5,5	monster	Black Mushroom	1084,3,360000,180000
 
 //==================================================
 // prt_fild08 - Prontera Field
 //==================================================
-prt_fild08,0,0	monster	Poring	2331,110,5000
-prt_fild08,0,0	monster	Lunatic	1690,110,5000
-prt_fild08,0,0	monster	Fabre	3023,88,5000
-prt_fild08,0,0	monster	Little Poring	1412,33,50000
-prt_fild08,0,0	monster	Pupa	1927,66,5000
+prt_fild08,0,0	monster	Poring	1002,110,5000
+prt_fild08,0,0	monster	Lunatic	1063,110,5000
+prt_fild08,0,0	monster	Fabre	1007,88,5000
+prt_fild08,0,0	monster	Little Poring	2398,33,50000
+prt_fild08,0,0	monster	Pupa	1008,66,5000
 
 //==================================================
 // prt_fild08 - Duplicates
 //==================================================
-prt_fild08a,0,0	monster	Poring	1815,110,5000
-prt_fild08a,0,0	monster	Lunatic	1050,110,5000
-prt_fild08a,0,0	monster	Fabre	1247,88,5000
-prt_fild08a,0,0	monster	Little Poring	1898,33,50000
-prt_fild08a,0,0	monster	Pupa	2834,66,5000
-prt_fild08b,0,0	monster	Poring	2618,110,5000
-prt_fild08b,0,0	monster	Lunatic	2799,110,5000
-prt_fild08b,0,0	monster	Fabre	2284,88,5000
-prt_fild08b,0,0	monster	Little Poring	2712,33,50000
-prt_fild08b,0,0	monster	Pupa	1001,66,5000
-prt_fild08c,0,0	monster	Poring	1354,110,5000
-prt_fild08c,0,0	monster	Lunatic	2670,110,5000
-prt_fild08c,0,0	monster	Fabre	2892,88,5000
-prt_fild08c,0,0	monster	Little Poring	2265,33,50000
-prt_fild08c,0,0	monster	Pupa	2771,66,5000
-prt_fild08d,0,0	monster	Poring	2252,110,5000
-prt_fild08d,0,0	monster	Lunatic	2080,110,5000
-prt_fild08d,0,0	monster	Fabre	2762,88,5000
-prt_fild08d,0,0	monster	Little Poring	2834,33,50000
-prt_fild08d,0,0	monster	Pupa	1493,66,5000
+prt_fild08a,0,0	monster	Poring	1002,110,5000
+prt_fild08a,0,0	monster	Lunatic	1063,110,5000
+prt_fild08a,0,0	monster	Fabre	1007,88,5000
+prt_fild08a,0,0	monster	Little Poring	2398,33,50000
+prt_fild08a,0,0	monster	Pupa	1008,66,5000
+prt_fild08b,0,0	monster	Poring	1002,110,5000
+prt_fild08b,0,0	monster	Lunatic	1063,110,5000
+prt_fild08b,0,0	monster	Fabre	1007,88,5000
+prt_fild08b,0,0	monster	Little Poring	2398,33,50000
+prt_fild08b,0,0	monster	Pupa	1008,66,5000
+prt_fild08c,0,0	monster	Poring	1002,110,5000
+prt_fild08c,0,0	monster	Lunatic	1063,110,5000
+prt_fild08c,0,0	monster	Fabre	1007,88,5000
+prt_fild08c,0,0	monster	Little Poring	2398,33,50000
+prt_fild08c,0,0	monster	Pupa	1008,66,5000
+prt_fild08d,0,0	monster	Poring	1002,110,5000
+prt_fild08d,0,0	monster	Lunatic	1063,110,5000
+prt_fild08d,0,0	monster	Fabre	1007,88,5000
+prt_fild08d,0,0	monster	Little Poring	2398,33,50000
+prt_fild08d,0,0	monster	Pupa	1008,66,5000
 
 
 //==================================================
 // prt_fild09 - Prontera Field
 //==================================================
-prt_fild09,0,0	monster	Magnolia	2702,140,5000
-prt_fild09,0,0	monster	Metaller	2226,60,5000
-prt_fild09,227977,115,5,5	monster	Yellow Plant	1081,3,360000,180000
+prt_fild09,0,0	monster	Magnolia	1138,140,5000
+prt_fild09,0,0	monster	Metaller	1058,60,5000
+prt_fild09,237,115,5,5	monster	Yellow Plant	1081,3,360000,180000
 
 //==================================================
 // prt_fild10 - Prontera Field
 //==================================================
-prt_fild10,0,0	monster	Elder Willow	2737,140,5000
-prt_fild10,0,0	monster	Poporing	2846,20,5000
-prt_fild10,0,0	monster	Horn	3215,20,5000
-prt_fild10,0,0	monster	Coco	2072,20,5000
-prt_fild10,99,114,20,5	monster	Red Mushroom	1085,1724,360000,180000
-prt_fild25660,155,179,10,10	monster	Shining Plant	1083,1,1800000,900000
+prt_fild10,0,0	monster	Elder Willow	1033,140,5000
+prt_fild10,0,0	monster	Poporing	1031,20,5000
+prt_fild10,0,0	monster	Horn	1128,20,5000
+prt_fild10,0,0	monster	Coco	1104,20,5000
+prt_fild10,99,114,20,5	monster	Red Mushroom	1085,15,360000,180000
+prt_fild10,155,179,10,10	monster	Shining Plant	1083,1,1800000,900000
 
 //==================================================
 // prt_fild11 - Prontera Field
 //==================================================
-prt_fild11,0,0	monster	Goblin	1866,60,5000
-prt_fild11,0,0	monster	Rotar Zairo	2406,50,5000
-prt_fild11,0,0	monster	Goblin Archer	1468,50,5000
-prt_fild11,0,0	monster	Goblin Steamrider	1153,30,5000
-prt_fild11,0,0	monster	Goblin	1886,10,5000
-prt_fild11,0,0	monster	Goblin	2727,10,5000
-prt_fild11,0,0	monster	Goblin	1369,10,5000
-prt_fild11,0,0	monster	Goblin	1603,10,5000
-prt_fild31971,0,0	monster	Panzer Goblin	1308,1,1800000,1200000
-prt_fild11,0,0	monster	Red Mushroom	142685,10,180000,90000
+prt_fild11,0,0	monster	Goblin	1126,60,5000
+prt_fild11,0,0	monster	Rotar Zairo	1392,50,5000
+prt_fild11,0,0	monster	Goblin Archer	1258,50,5000
+prt_fild11,0,0	monster	Goblin Steamrider	1280,30,5000
+prt_fild11,0,0	monster	Goblin	1124,10,5000
+prt_fild11,0,0	monster	Goblin	1125,10,5000
+prt_fild11,0,0	monster	Goblin	1123,10,5000
+prt_fild11,0,0	monster	Goblin	1122,10,5000
+prt_fild11,0,0	monster	Panzer Goblin	1308,1,1800000,1200000
+prt_fild11,0,0	monster	Red Mushroom	1085,10,180000,90000

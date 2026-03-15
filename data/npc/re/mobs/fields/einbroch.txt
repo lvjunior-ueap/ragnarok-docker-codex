@@ -34,71 +34,71 @@
 //==================================================
 // ein_fild03 - Einbroch Field
 //==================================================
-ein_fild03,0,0	monster	Teddy Bear	1649,100,5000
-ein_fild03,0,0	monster	Venomous	1766,20,5000
-ein_fild03,0,0	monster	Noxious	2773,20,5000
-ein_fild03,0,0	monster	Pitman	2545,20,5000
-ein_fild03,0,0	monster	Yellow Plant	1081,2687,60000,30000
-ein_fild03,0,0	monster	Green Plant	1080,3028,60000,30000
+ein_fild03,0,0	monster	Teddy Bear	1622,100,5000
+ein_fild03,0,0	monster	Venomous	1621,20,5000
+ein_fild03,0,0	monster	Noxious	1620,20,5000
+ein_fild03,0,0	monster	Pitman	1616,20,5000
+ein_fild03,0,0	monster	Yellow Plant	1081,15,60000,30000
+ein_fild03,0,0	monster	Green Plant	1080,15,60000,30000
 
 //==================================================
 // ein_fild04 - Einbroch Field
 //==================================================
-ein_fild04,0,0	monster	Venomous	1638,100,5000
-ein_fild04,0,0	monster	Noxious	1140,30,5000
-ein_fild04,0,0	monster	Teddy Bear	1290,20,5000
-ein_fild04,0,0	monster	Demon Pungus	1256,15,5000
-ein_fild04,0,0	monster	Pitman	2553,10,5000
-ein_fild04,0,0	monster	Red Plant	104278,10,60000,30000
-ein_fild04,0,0	monster	Yellow Plant	195581,10,60000,30000
-ein_fild04,0,0	monster	Green Plant	103280,10,60000,30000
+ein_fild04,0,0	monster	Venomous	1621,100,5000
+ein_fild04,0,0	monster	Noxious	1620,30,5000
+ein_fild04,0,0	monster	Teddy Bear	1622,20,5000
+ein_fild04,0,0	monster	Demon Pungus	1378,15,5000
+ein_fild04,0,0	monster	Pitman	1616,10,5000
+ein_fild04,0,0	monster	Red Plant	1078,10,60000,30000
+ein_fild04,0,0	monster	Yellow Plant	1081,10,60000,30000
+ein_fild04,0,0	monster	Green Plant	1080,10,60000,30000
 
 //==================================================
 // ein_fild05 - Einbroch Field
 //==================================================
-ein_fild05,0,0	monster	Noxious	1805,100,5000
-ein_fild05,0,0	monster	Venomous	2442,30,5000
-ein_fild05,0,0	monster	Teddy Bear	3007,20,5000
-ein_fild05,0,0	monster	Demon Pungus	2563,15,5000
-ein_fild05,0,0	monster	Pitman	2236,10,5000
+ein_fild05,0,0	monster	Noxious	1620,100,5000
+ein_fild05,0,0	monster	Venomous	1621,30,5000
+ein_fild05,0,0	monster	Teddy Bear	1622,20,5000
+ein_fild05,0,0	monster	Demon Pungus	1378,15,5000
+ein_fild05,0,0	monster	Pitman	1616,10,5000
 
 //==================================================
 // ein_fild06 - Einbroch Field
 //==================================================
-ein_fild06,0,0	monster	Holden	3218,100,5000
-ein_fild06,0,0	monster	Metaling	1190,30,5000
-ein_fild06,0,0	monster	Red Plant	100978,10,120000,60000
-ein_fild06,0,0	monster	Yellow Plant	166681,10,120000,60000
-ein_fild06,0,0	monster	Black Mushroom	1084,3216,120000,60000
+ein_fild06,0,0	monster	Holden	1628,100,5000
+ein_fild06,0,0	monster	Metaling	1613,30,5000
+ein_fild06,0,0	monster	Red Plant	1078,10,120000,60000
+ein_fild06,0,0	monster	Yellow Plant	1081,10,120000,60000
+ein_fild06,0,0	monster	Black Mushroom	1084,5,120000,60000
 
 //==================================================
 // ein_fild07 - Einbroch Field
 //==================================================
-ein_fild07,0,0	monster	Metaling	2376,90,5000
-ein_fild07,0,0	monster	Porcellio	1803,30,5000
-ein_fild07,0,0	monster	Holden	2878,10,5000
-ein_fild07,0,0	monster	Ungoliant	1810618,1,86400000,86000000
-ein_fild07,0,0	monster	Red Plant	209278,10,120000,60000
-ein_fild07,0,0	monster	Yellow Plant	144781,10,120000,60000
-ein_fild07,0,0	monster	Red Mushroom	184385,10,120000,60000
+ein_fild07,0,0	monster	Metaling	1613,90,5000
+ein_fild07,0,0	monster	Porcellio	1619,30,5000
+ein_fild07,0,0	monster	Holden	1628,10,5000
+ein_fild07,0,0	monster	Ungoliant	1618,1,86400000,86000000
+ein_fild07,0,0	monster	Red Plant	1078,10,120000,60000
+ein_fild07,0,0	monster	Yellow Plant	1081,10,120000,60000
+ein_fild07,0,0	monster	Red Mushroom	1085,10,120000,60000
 
 //==================================================
 // ein_fild08 - Einbroch Field
 //==================================================
-ein_fild08,0,0	monster	Metaling	2409,100,5000
-ein_fild08,0,0	monster	Porcellio	1889,30,5000
-ein_fild08,0,0	monster	Red Plant	200378,10,120000,60000
-ein_fild08,0,0	monster	Yellow Plant	253481,10,120000,60000
-ein_fild08,0,0	monster	Red Mushroom	234085,10,120000,60000
+ein_fild08,0,0	monster	Metaling	1613,100,5000
+ein_fild08,0,0	monster	Porcellio	1619,30,5000
+ein_fild08,0,0	monster	Red Plant	1078,10,120000,60000
+ein_fild08,0,0	monster	Yellow Plant	1081,10,120000,60000
+ein_fild08,0,0	monster	Red Mushroom	1085,10,120000,60000
 
 //==================================================
 // ein_fild09 - Einbroch Field
 //==================================================
-ein_fild09,0,0	monster	Porcellio	1855,70,5000
-ein_fild09,0,0	monster	Metaling	2808,30,5000
-ein_fild09,0,0	monster	Red Plant	108778,10,120000,60000
-ein_fild09,0,0	monster	Yellow Plant	170381,10,120000,60000
-ein_fild09,0,0	monster	Red Mushroom	212685,10,120000,60000
+ein_fild09,0,0	monster	Porcellio	1619,70,5000
+ein_fild09,0,0	monster	Metaling	1613,30,5000
+ein_fild09,0,0	monster	Red Plant	1078,10,120000,60000
+ein_fild09,0,0	monster	Yellow Plant	1081,10,120000,60000
+ein_fild09,0,0	monster	Red Mushroom	1085,10,120000,60000
 
 //==================================================
 // ein_fild10 - Disabled on Renewal

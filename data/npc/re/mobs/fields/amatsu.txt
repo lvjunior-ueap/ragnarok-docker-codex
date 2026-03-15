@@ -16,22 +16,22 @@
 //==================================================
 // ama_fild01 - Amatsu Field
 //==================================================
-ama_fild01,0,0	monster	Bigfoot	2852,15,5000
-ama_fild01,0,0	monster	Karakasa	1930,50,5000
-ama_fild01,0,0	monster	Kapha	3504,40,5000
-ama_fild01,0,0	monster	Miyabi Doll	2959,2,5000
-ama_fild01,0,0	monster	Poison Toad	2420,1,5000
-ama_fild01381,173,313	monster	Hydra	1068,1,60000,30000
-ama_fild01738,173,314	monster	Hydra	1068,1,60000,30000
-ama_fild03231,173,310	monster	Hydra	1068,1,60000,30000
-ama_fild01739,177,315	monster	Hydra	1068,1,60000,30000
-ama_fild02766,175,315	monster	Hydra	1068,1,63000,31500
-ama_fild01121,169,314	monster	Hydra	1068,1,63000,31500
-ama_fild01350,177,314	monster	Hydra	1068,1,66000,33000
-ama_fild02534,175,313	monster	Hydra	1068,1,66000,33000
-ama_fild02264,173,315	monster	Hydra	1068,1,66000,33000
-ama_fild01552,171,313	monster	Hydra	1068,1,66000,33000
-ama_fild01169,171,314	monster	Hydra	1068,1,69000,34500
-ama_fild03097,171,315	monster	Hydra	1068,1,69000,34500
-ama_fild03014,175,314	monster	Hydra	1068,1,72000,39000
-ama_fild02814,169,315	monster	Hydra	1068,1,72000,39000
+ama_fild01,0,0	monster	Bigfoot	1060,15,5000
+ama_fild01,0,0	monster	Karakasa	1400,50,5000
+ama_fild01,0,0	monster	Kapha	1406,40,5000
+ama_fild01,0,0	monster	Miyabi Doll	1404,2,5000
+ama_fild01,0,0	monster	Poison Toad	1402,1,5000
+ama_fild01,173,313	monster	Hydra	1068,1,60000,30000
+ama_fild01,173,314	monster	Hydra	1068,1,60000,30000
+ama_fild01,173,310	monster	Hydra	1068,1,60000,30000
+ama_fild01,177,315	monster	Hydra	1068,1,60000,30000
+ama_fild01,175,315	monster	Hydra	1068,1,63000,31500
+ama_fild01,169,314	monster	Hydra	1068,1,63000,31500
+ama_fild01,177,314	monster	Hydra	1068,1,66000,33000
+ama_fild01,175,313	monster	Hydra	1068,1,66000,33000
+ama_fild01,173,315	monster	Hydra	1068,1,66000,33000
+ama_fild01,171,313	monster	Hydra	1068,1,66000,33000
+ama_fild01,171,314	monster	Hydra	1068,1,69000,34500
+ama_fild01,171,315	monster	Hydra	1068,1,69000,34500
+ama_fild01,175,314	monster	Hydra	1068,1,72000,39000
+ama_fild01,169,315	monster	Hydra	1068,1,72000,39000

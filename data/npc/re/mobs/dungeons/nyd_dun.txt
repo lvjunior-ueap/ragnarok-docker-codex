@@ -13,18 +13,18 @@
 //==================================================
 // nyd_dun01 - Yggdrasil Root
 //==================================================
-nyd_dun01,0,0	monster	Draco	1795,40,5000
-nyd_dun01,0,0	monster	Aqua Elemental	3507,20,5000
-nyd_dun01,0,0	monster	Dark Pinguicula	1196,10,5000
-nyd_dun01,0,0	monster	Rata	1724,2,900000
-nyd_dun01,0,0	monster	Duneyrr	1433,2,900000
-nyd_dun01439,47,219	monster	Draco Egg	2014,1,60000,30000
-nyd_dun01511,57,220	monster	Draco Egg	2014,1,60000,30000
-nyd_dun01014,57,226	monster	Draco Egg	2014,1,60000,30000
-nyd_dun02834,56,226	monster	Draco Egg	2014,1,60000,30000
-nyd_dun02560,64,219	monster	Draco Egg	2014,1,60000,30000
-nyd_dun03446,53,221	monster	Draco Egg	2014,1,60000,30000
-nyd_dun02708,58,216	monster	Draco Egg	2014,1,60000,30000
-nyd_dun01596,60,226	monster	Draco Egg	2014,1,60000,30000
-nyd_dun02775,53,228	monster	Draco Egg	2014,1,60000,30000
-nyd_dun02145,47,218	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,0,0	monster	Draco	2013,40,5000
+nyd_dun01,0,0	monster	Aqua Elemental	2016,20,5000
+nyd_dun01,0,0	monster	Dark Pinguicula	2015,10,5000
+nyd_dun01,0,0	monster	Rata	2017,2,900000
+nyd_dun01,0,0	monster	Duneyrr	2018,2,900000
+nyd_dun01,47,219	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,57,220	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,57,226	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,56,226	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,64,219	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,53,221	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,58,216	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,60,226	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,53,228	monster	Draco Egg	2014,1,60000,30000
+nyd_dun01,47,218	monster	Draco Egg	2014,1,60000,30000

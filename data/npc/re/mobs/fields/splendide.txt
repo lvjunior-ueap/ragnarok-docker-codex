@@ -14,20 +14,20 @@
 //==================================================
 // spl_fild01 - Splendide Field
 //==================================================
-spl_fild01,0,0	monster	Dark Pinguicula	2314,50,5000
-spl_fild01,0,0	monster	Naga	1548,35,5000
-spl_fild01,0,0	monster	Cornus	1869,25,5000
+spl_fild01,0,0	monster	Dark Pinguicula	2015,50,5000
+spl_fild01,0,0	monster	Naga	1993,35,5000
+spl_fild01,0,0	monster	Cornus	1992,25,5000
 
 //==================================================
 // spl_fild02 - Splendide Field
 //==================================================
-spl_fild02,0,0	monster	Pinguicula	2279,75,5000
-spl_fild02,0,0	monster	Luciola Vespa	2226,15,5000
+spl_fild02,0,0	monster	Pinguicula	1995,75,5000
+spl_fild02,0,0	monster	Luciola Vespa	1994,15,5000
 
 //==================================================
 // spl_fild03 - Splendide Field
 //==================================================
-spl_fild03,0,0	monster	Luciola Vespa	2829,35,5000
-spl_fild03,0,0	monster	Cornus	1896,25,5000
-spl_fild03,0,0	monster	Naga	1513,20,5000
-spl_fild03,0,0	monster	Tendrilion	2327,1,3600000
+spl_fild03,0,0	monster	Luciola Vespa	1994,35,5000
+spl_fild03,0,0	monster	Cornus	1992,25,5000
+spl_fild03,0,0	monster	Naga	1993,20,5000
+spl_fild03,0,0	monster	Tendrilion	1991,1,3600000

@@ -19,37 +19,37 @@
 //==================================================
 // thor_v01 - Thor Volcano Dungeon
 //==================================================
-thor_v01,0,0	monster	Kasa	2454,45,5000
-thor_v01,0,0	monster	Imp	2659,25,5000
-thor_v01,0,0	monster	Magmaring	1264,10,5000
-thor_v01,0,0	monster	Salamander	1180,7,5000
-thor_v01,0,0	monster	Bow Guardian	1795,5,5000
-thor_v01,0,0	monster	Sword Guardian	2886,5,5000
-thor_v01,0,0	monster	Bow Guardian	1304,5,420000
-thor_v01,0,0	monster	Sword Guardian	1198,5,420000
-thor_v01,0,0	monster	Byrogue	2919,1,5000
+thor_v01,0,0	monster	Kasa	1833,45,5000
+thor_v01,0,0	monster	Imp	1837,25,5000
+thor_v01,0,0	monster	Magmaring	1836,10,5000
+thor_v01,0,0	monster	Salamander	1831,7,5000
+thor_v01,0,0	monster	Bow Guardian	1830,5,5000
+thor_v01,0,0	monster	Sword Guardian	1829,5,5000
+thor_v01,0,0	monster	Bow Guardian	1830,5,420000
+thor_v01,0,0	monster	Sword Guardian	1829,5,420000
+thor_v01,0,0	monster	Byrogue	1839,1,5000
 
 //==================================================
 // thor_v02 - Thor Volcano Dungeon
 //==================================================
-thor_v02,0,0	monster	Knocker	1818,55,5000
-thor_v02,0,0	monster	Magmaring	1026,10,5000
-thor_v02,0,0	monster	Imp	3214,10,5000
-thor_v02,0,0	monster	Kaho	3240,10,5000
-thor_v02,0,0	monster	Salamander	1460,1,5000
-thor_v02,0,0	monster	Bow Guardian	2540,1,7200000
-thor_v02,0,0	monster	Sword Guardian	1604,1,7200000
+thor_v02,0,0	monster	Knocker	1838,55,5000
+thor_v02,0,0	monster	Magmaring	1836,10,5000
+thor_v02,0,0	monster	Imp	1837,10,5000
+thor_v02,0,0	monster	Kaho	1072,10,5000
+thor_v02,0,0	monster	Salamander	1831,1,5000
+thor_v02,0,0	monster	Bow Guardian	1830,1,7200000
+thor_v02,0,0	monster	Sword Guardian	1829,1,7200000
 
 //==================================================
 // thor_v03 - Thor Volcano Dungeon
 //==================================================
-thor_v03,0,0	monster	Salamander	2144,60,5000
-thor_v03,0,0	monster	Kasa	3007,40,5000
-thor_v03,0,0	monster	Bow Guardian	3487,10,5000
-thor_v03,0,0	monster	Sword Guardian	2849,10,5000
-thor_v03,0,0	monster	Byrogue	1521,5,5000
-thor_v03,0,0	monster	Sword Guardian	3446,5,5000
-thor_v03,0,0	monster	Bow Guardian	2186,5,5000
-thor_v03,0,0	monster	Bow Guardian	3015,5,1800000
-thor_v03,0,0	monster	Sword Guardian	3022,5,1800000
-thor_v03,0,0,0,0	boss_monster	Ifrit	1832,1,2298,600000,0
+thor_v03,0,0	monster	Salamander	1831,60,5000
+thor_v03,0,0	monster	Kasa	1833,40,5000
+thor_v03,0,0	monster	Bow Guardian	1830,10,5000
+thor_v03,0,0	monster	Sword Guardian	1829,10,5000
+thor_v03,0,0	monster	Byrogue	1839,5,5000
+thor_v03,0,0	monster	Sword Guardian	1829,5,5000
+thor_v03,0,0	monster	Bow Guardian	1830,5,5000
+thor_v03,0,0	monster	Bow Guardian	1830,5,1800000
+thor_v03,0,0	monster	Sword Guardian	1829,5,1800000
+thor_v03,0,0,0,0	boss_monster	Ifrit	1832,1,39600000,600000,0

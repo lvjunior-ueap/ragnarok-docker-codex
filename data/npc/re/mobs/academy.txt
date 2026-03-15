@@ -13,89 +13,89 @@
 //==================================================
 // prt_fild08 - Prontera Field 
 //==================================================
-prt_fild08,0,0	monster	Poring	2296,110,5000
-prt_fild08,0,0	monster	Lunatic	1052,100,5000
-prt_fild08,0,0	monster	Fabre	2297,100,5000
-prt_fild08,0,0	monster	Little Poring	1296,30,50000
-prt_fild08a,0,0	monster	Poring	1009,110,5000
-prt_fild08a,0,0	monster	Lunatic	2472,100,5000
-prt_fild08a,0,0	monster	Fabre	1025,100,5000
-prt_fild08a,0,0	monster	Little Poring	2539,30,50000
-prt_fild08b,0,0	monster	Poring	1894,110,5000
-prt_fild08b,0,0	monster	Lunatic	1858,100,5000
-prt_fild08b,0,0	monster	Fabre	3254,100,5000
-prt_fild08b,0,0	monster	Little Poring	2451,30,50000
-prt_fild08c,0,0	monster	Poring	2257,110,5000
-prt_fild08c,0,0	monster	Lunatic	3499,100,5000
-prt_fild08c,0,0	monster	Fabre	1898,100,5000
-prt_fild08c,0,0	monster	Little Poring	1234,30,50000
-prt_fild08d,0,0	monster	Poring	1714,110,5000
-prt_fild08d,0,0	monster	Lunatic	2301,100,5000
-prt_fild08d,0,0	monster	Fabre	1799,100,5000
-prt_fild08d,0,0	monster	Little Poring	2102,30,50000
+prt_fild08,0,0	monster	Poring	1002,110,5000
+prt_fild08,0,0	monster	Lunatic	1063,100,5000
+prt_fild08,0,0	monster	Fabre	1007,100,5000
+prt_fild08,0,0	monster	Little Poring	2398,30,50000
+prt_fild08a,0,0	monster	Poring	1002,110,5000
+prt_fild08a,0,0	monster	Lunatic	1063,100,5000
+prt_fild08a,0,0	monster	Fabre	1007,100,5000
+prt_fild08a,0,0	monster	Little Poring	2398,30,50000
+prt_fild08b,0,0	monster	Poring	1002,110,5000
+prt_fild08b,0,0	monster	Lunatic	1063,100,5000
+prt_fild08b,0,0	monster	Fabre	1007,100,5000
+prt_fild08b,0,0	monster	Little Poring	2398,30,50000
+prt_fild08c,0,0	monster	Poring	1002,110,5000
+prt_fild08c,0,0	monster	Lunatic	1063,100,5000
+prt_fild08c,0,0	monster	Fabre	1007,100,5000
+prt_fild08c,0,0	monster	Little Poring	2398,30,50000
+prt_fild08d,0,0	monster	Poring	1002,110,5000
+prt_fild08d,0,0	monster	Lunatic	1063,100,5000
+prt_fild08d,0,0	monster	Fabre	1007,100,5000
+prt_fild08d,0,0	monster	Little Poring	2398,30,50000
 
 //==================================================
 // treasure_n1 - Izlude Sunken Ship 1F
 //==================================================
-treasure_n1,0,0	monster	Red Mushroom	3447,10,50000
-treasure_n1,0,0	monster	Black Mushroom	2298,10,50000
-treasure_n1,160,54,13,13	monster	Red Mushroom	2263,10,50000
-treasure_n1,160,54,13,13	monster	Black Mushroom	2302,10,50000
-treasure_n1,160,54,13,13	monster	Dead Plankton	3495,10,50000
-treasure_n1,0,0	monster	Red Plant	3501,5,50000
-treasure_n1,0,0	monster	Green Plant	2645,5,50000
-treasure_n1,0,0	monster	Yellow Plant	1857,5,50000
-treasure_n1,0,0	monster	Blue Plant	1394,5,50000
-treasure_n1,0,0	monster	White Plant	2692,5,50000
-treasure_n1,0,0	monster	Zombie	1811,1,100000
-treasure_n1,0,0	monster	Zombie	1402,1,100000
-treasure_n1,68,47,9,9	monster	Weak Skeleton	2093,4,8000
-treasure_n1,106,42,9,9	monster	Roda Frog	2214,3,60000
-treasure_n1,32,37,9,9	monster	Roda Frog	2765,6,60000
-treasure_n1,69,112,9,9	monster	Spore	1962,3,20000
-treasure_n1,35,112,9,9	monster	Spore	1927,3,20000
-treasure_n1,35,112,9,9	monster	Roda Frog	2905,3,20000
-treasure_n1,111,111,9,9	monster	Roda Frog	2050,3,60000
-treasure_n1,111,111,9,9	monster	Dead Plankton	1725,5,60000
-treasure_n1,69,174,9,9	monster	Dead Plankton	2840,7,120000
-treasure_n1,82,155,9,9	monster	Spore	1479,4,60000
-treasure_n1,55,155,9,9	monster	Spore	2855,2,60000
-treasure_n1,22,160	monster	Weak Skeleton	2856,3,8000
-treasure_n1,163,155,13,13	monster	Weak Skeleton	1215,5,8000
-treasure_n1,163,155,13,13	monster	Zombie	1202,1,8000
+treasure_n1,0,0	monster	Red Mushroom	1085,10,50000
+treasure_n1,0,0	monster	Black Mushroom	1084,10,50000
+treasure_n1,160,54,13,13	monster	Red Mushroom	1085,10,50000
+treasure_n1,160,54,13,13	monster	Black Mushroom	1084,10,50000
+treasure_n1,160,54,13,13	monster	Dead Plankton	2404,10,50000
+treasure_n1,0,0	monster	Red Plant	1078,5,50000
+treasure_n1,0,0	monster	Green Plant	1080,5,50000
+treasure_n1,0,0	monster	Yellow Plant	1081,5,50000
+treasure_n1,0,0	monster	Blue Plant	1079,5,50000
+treasure_n1,0,0	monster	White Plant	1082,5,50000
+treasure_n1,0,0	monster	Zombie	1015,1,100000
+treasure_n1,0,0	monster	Zombie	1015,1,100000
+treasure_n1,68,47,9,9	monster	Weak Skeleton	2405,4,8000
+treasure_n1,106,42,9,9	monster	Roda Frog	1012,3,60000
+treasure_n1,32,37,9,9	monster	Roda Frog	1012,6,60000
+treasure_n1,69,112,9,9	monster	Spore	1014,3,20000
+treasure_n1,35,112,9,9	monster	Spore	1014,3,20000
+treasure_n1,35,112,9,9	monster	Roda Frog	1012,3,20000
+treasure_n1,111,111,9,9	monster	Roda Frog	1012,3,60000
+treasure_n1,111,111,9,9	monster	Dead Plankton	2404,5,60000
+treasure_n1,69,174,9,9	monster	Dead Plankton	2404,7,120000
+treasure_n1,82,155,9,9	monster	Spore	1014,4,60000
+treasure_n1,55,155,9,9	monster	Spore	1014,2,60000
+treasure_n1,22,160	monster	Weak Skeleton	2405,3,8000
+treasure_n1,163,155,13,13	monster	Weak Skeleton	2405,5,8000
+treasure_n1,163,155,13,13	monster	Zombie	1015,1,8000
 
 //==================================================
 // treasure_n2 - Izlude Sunken Ship 2F
 //==================================================
-treasure_n2,0,0	monster	Red Mushroom	1354,10,50000
-treasure_n2,0,0	monster	Black Mushroom	3455,10,50000
-treasure_n2,150,40,13,13	monster	Weak Soldier Skeleton	1060,3,50000
-treasure_n2,150,40,13,13	monster	Weak Skeleton	3202,5,50000
-treasure_n2,0,0	monster	Red Plant	2304,5,50000
-treasure_n2,0,0	monster	Green Plant	1644,5,50000
-treasure_n2,0,0	monster	Yellow Plant	1676,5,50000
-treasure_n2,0,0	monster	Blue Plant	2404,5,50000
-treasure_n2,0,0	monster	White Plant	2696,5,50000
-treasure_n2,100,50,13,13	monster	Weak Skeleton	1944,7,30000
-treasure_n2,100,50,13,13	monster	Dead Plankton	1065,5,30000
-treasure_n2,50,40,13,13	monster	Weak Soldier Skeleton	3125,3,50000
-treasure_n2,50,40,13,13	monster	Weak Skeleton	2797,5,50000
-treasure_n2,40,75,5,3	monster	Zombie	1748,2,60000
-treasure_n2,40,75,5,5	monster	Dead Plankton	1052,4,60000
-treasure_n2,50,140,5,5	monster	Weak Skeleton	2025,10,60000
-treasure_n2,50,140,5,5	monster	Weak Soldier Skeleton	1258,5,60000
-treasure_n2,160,140,5,5	monster	Weak Skeleton	2263,5,60000
-treasure_n2,160,140,5,5	monster	Weak Soldier Skeleton	2021,3,60000
-treasure_n2,160,140,5,2	monster	Zombie	1292,3,60000
-treasure_n2,160,70,13,13	monster	Weak Skeleton	2289,5,30000
-treasure_n2,160,70,13,13	monster	Dead Plankton	1278,7,30000
-treasure_n2,155,40,9,9	monster	Zombie	3218,3,120000
-treasure_n2,100,85,13,13	monster	Weak Soldier Skeleton	1068,2,50000
-treasure_n2,100,160,13,13	monster	Weak Soldier Skeleton	1660,5,120000
-treasure_n2,100,160,13,13	monster	Weak Skeleton	3102,7,200000
-treasure_n2,100,160,13,13	monster	Dead Plankton	2445,4,60000
+treasure_n2,0,0	monster	Red Mushroom	1085,10,50000
+treasure_n2,0,0	monster	Black Mushroom	1084,10,50000
+treasure_n2,150,40,13,13	monster	Weak Soldier Skeleton	2406,3,50000
+treasure_n2,150,40,13,13	monster	Weak Skeleton	2405,5,50000
+treasure_n2,0,0	monster	Red Plant	1078,5,50000
+treasure_n2,0,0	monster	Green Plant	1080,5,50000
+treasure_n2,0,0	monster	Yellow Plant	1081,5,50000
+treasure_n2,0,0	monster	Blue Plant	1079,5,50000
+treasure_n2,0,0	monster	White Plant	1082,5,50000
+treasure_n2,100,50,13,13	monster	Weak Skeleton	2405,7,30000
+treasure_n2,100,50,13,13	monster	Dead Plankton	2404,5,30000
+treasure_n2,50,40,13,13	monster	Weak Soldier Skeleton	2406,3,50000
+treasure_n2,50,40,13,13	monster	Weak Skeleton	2405,5,50000
+treasure_n2,40,75,5,3	monster	Zombie	1015,2,60000
+treasure_n2,40,75,5,5	monster	Dead Plankton	2404,4,60000
+treasure_n2,50,140,5,5	monster	Weak Skeleton	2405,10,60000
+treasure_n2,50,140,5,5	monster	Weak Soldier Skeleton	2406,5,60000
+treasure_n2,160,140,5,5	monster	Weak Skeleton	2405,5,60000
+treasure_n2,160,140,5,5	monster	Weak Soldier Skeleton	2406,3,60000
+treasure_n2,160,140,5,2	monster	Zombie	1015,3,60000
+treasure_n2,160,70,13,13	monster	Weak Skeleton	2405,5,30000
+treasure_n2,160,70,13,13	monster	Dead Plankton	2404,7,30000
+treasure_n2,155,40,9,9	monster	Zombie	1015,3,120000
+treasure_n2,100,85,13,13	monster	Weak Soldier Skeleton	2406,2,50000
+treasure_n2,100,160,13,13	monster	Weak Soldier Skeleton	2406,5,120000
+treasure_n2,100,160,13,13	monster	Weak Skeleton	2405,7,200000
+treasure_n2,100,160,13,13	monster	Dead Plankton	2404,4,60000
 
 //==================================================
 // new_1-3 - Novice Training Grounds
 //==================================================
-new_1-3,0,0	monster	Little Poring	2671,30,50000
+new_1-3,0,0	monster	Little Poring	2398,30,50000

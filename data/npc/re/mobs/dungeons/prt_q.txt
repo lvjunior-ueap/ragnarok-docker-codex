@@ -7,8 +7,8 @@
 //============================================================
 
 // Prontera Invasion
-prt_q,0,0	monster	Zombie Guard	3018,60
-prt_q,0,0	monster	Ghoul	2748,10
-prt_q,0,0	monster	Immortal Corps	1980,30
-prt_q,0,0	monster	Hunter Fly	2323,15
-prt_q,0,0	monster	Immortal Commander	1963,1
+prt_q,0,0	monster	Zombie Guard	3452,60
+prt_q,0,0	monster	Ghoul	1036,10
+prt_q,0,0	monster	Immortal Corps	3451,30
+prt_q,0,0	monster	Hunter Fly	1035,15
+prt_q,0,0	monster	Immortal Commander	3490,1
