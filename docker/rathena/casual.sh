@@ -21,7 +21,8 @@ sh ./athena-start stop || true
 # path
 #################################
 
-RATHENA=${RATHENA_PATH:-/datastoresetup/usr-bin-rathena}
+#RATHENA=${RATHENA_PATH:-/datastoresetup/usr-bin-rathena}
+RATHENA=/usr/bin/rathena
 
 echo "=== Aplicando modo CASUAL ==="
 echo "Rathena path: $RATHENA"
@@ -46,8 +47,13 @@ sed -i 's/item_rate_card:.*/item_rate_card: 300/' $RATHENA/conf/battle/drops.con
 # 3 - remover PIN
 #################################
 
-sed -i 's/char_pin:.*/char_pin: no/' $RATHENA/conf/login_athena.conf || true
-sed -i 's/char_pin_enabled:.*/char_pin_enabled: false/' $RATHENA/conf/login_athena.conf || true
+echo "=== Desativando sistema de PIN ==="
+
+sed -i 's/pincode_enabled:.*/pincode_enabled: no/' $RATHENA/conf/char_athena.conf || true
+sed -i 's/pincode_force:.*/pincode_force: no/' $RATHENA/conf/char_athena.conf || true
+
+echo "PIN config atual:"
+grep pincode $RATHENA/conf/char_athena.conf || true
 
 #################################
 # 4 - starter items
@@ -77,7 +83,7 @@ NPCCONF=$RATHENA/npc/scripts_custom.conf
 echo "=== Ativando NPCs CASUAL ==="
 
 enable_npc() {
-    sed -i "s|//npc: npc/custom/$1|npc: npc/custom/$1|" $NPCCONF || true
+    sed -i "s|//npc/custom/$1|npc: npc/custom/$1|" $NPCCONF || true
 }
 
 enable_npc warper.txt
@@ -86,6 +92,7 @@ enable_npc stylist.txt
 enable_npc card_remover.txt
 enable_npc platinum_skills.txt
 enable_npc resetnpc.txt
+enable_npc jobmaster.txt
 
 #################################
 # 5 - garantir carregamento dos NPCs custom

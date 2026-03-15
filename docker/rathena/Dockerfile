@@ -11,6 +11,13 @@ RUN apt-get update && apt-get install -y \
     python3 \
     && rm -rf /var/lib/apt/lists/*
 
+
+# garantir UTF-8 no container
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
+ENV LANGUAGE=C.UTF-8
+
+
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
 RUN echo 'alias rathena-up="cd / && sh launch-athena.sh"' >> /root/.zshrc
@@ -32,8 +39,10 @@ COPY docker/rathena/start.sh /start.sh
 COPY docker/rathena/casual.sh /casual.sh
 COPY docker/rathena/build_ro_database.py /build_ro_database.py
 COPY docker/rathena/database.html /var/www/html/database.html
+COPY docker/rathena/cat_python.py /cat_python.py
 
 RUN chmod +x /start.sh
+RUN chmod +x /cat_python.py
 RUN chmod +x /build_ro_database.py
 
 CMD ["/start.sh"]
