@@ -2,25 +2,30 @@
 
 set -e
 
-RATHENA=/opt/rathena
+#################################
+# path
+#################################
+
+RATHENA=${RATHENA_PATH:-/datastoresetup/usr-bin-rathena}
 
 echo "=== Aplicando modo CASUAL ==="
+echo "Rathena path: $RATHENA"
 
 #################################
 # 1 - EXP rates
 #################################
 
-sed -i 's/base_exp_rate:.*/base_exp_rate: 10/' $RATHENA/conf/battle/exp.conf
-sed -i 's/job_exp_rate:.*/job_exp_rate: 10/' $RATHENA/conf/battle/exp.conf
+sed -i 's/base_exp_rate:.*/base_exp_rate: 3300/' $RATHENA/conf/battle/exp.conf || true
+sed -i 's/job_exp_rate:.*/job_exp_rate: 3300/' $RATHENA/conf/battle/exp.conf || true
 
 #################################
 # 2 - DROP rates
 #################################
 
-sed -i 's/item_rate_common:.*/item_rate_common: 500/' $RATHENA/conf/battle/drop.conf
-sed -i 's/item_rate_heal:.*/item_rate_heal: 500/' $RATHENA/conf/battle/drop.conf
-sed -i 's/item_rate_equip:.*/item_rate_equip: 500/' $RATHENA/conf/battle/drop.conf
-sed -i 's/item_rate_card:.*/item_rate_card: 300/' $RATHENA/conf/battle/drop.conf
+sed -i 's/item_rate_common:.*/item_rate_common: 1500/' $RATHENA/conf/battle/drops.conf || true
+sed -i 's/item_rate_heal:.*/item_rate_heal: 500/' $RATHENA/conf/battle/drops.conf || true
+sed -i 's/item_rate_equip:.*/item_rate_equip: 1000/' $RATHENA/conf/battle/drops.conf || true
+sed -i 's/item_rate_card:.*/item_rate_card: 300/' $RATHENA/conf/battle/drops.conf || true
 
 #################################
 # 3 - remover PIN
@@ -30,7 +35,7 @@ sed -i 's/char_pin:.*/char_pin: no/' $RATHENA/conf/login_athena.conf || true
 sed -i 's/char_pin_enabled:.*/char_pin_enabled: false/' $RATHENA/conf/login_athena.conf || true
 
 #################################
-# 4 - criar NPC starter
+# 4 - starter items
 #################################
 
 mkdir -p $RATHENA/npc/custom
@@ -49,80 +54,32 @@ OnPCLoginEvent:
 EOF
 
 #################################
-# 5 - healer
+# 5 - registrar NPCs existentes
 #################################
 
-cat <<EOF > $RATHENA/npc/custom/healer.txt
-prontera,150,180,4	script	Healer	4_M_01,{
-	mes "[Healer]";
-	mes "Vou curar você.";
-	next;
+CUSTOMCONF=$RATHENA/npc/custom/custom.conf
+touch $CUSTOMCONF
 
-	percentheal 100,100;
-	sc_end SC_ALL;
-
-	mes "Pronto!";
-	close;
+add_npc() {
+    if ! grep -q "$1" $CUSTOMCONF; then
+        echo "npc: npc/custom/$1" >> $CUSTOMCONF
+    fi
 }
-EOF
+
+echo "// Casual Mode NPCs" >> $CUSTOMCONF
+
+add_npc starter_items.txt
+add_npc healer.txt
+add_npc warper.txt
+add_npc stylist.txt
+add_npc card_remover.txt
+add_npc platinum_skills.txt
 
 #################################
-# 6 - warper
-#################################
-
-cat <<EOF > $RATHENA/npc/custom/warper.txt
-prontera,155,180,4	script	Warper	4_F_01,{
-
-	mes "[Warper]";
-	mes "Para onde deseja ir?";
-	next;
-
-	menu
-	"Prontera",L1,
-	"Geffen",L2,
-	"Payon",L3,
-	"Izlude",L4;
-
-L1:
-	warp "prontera",150,150;
-	close;
-
-L2:
-	warp "geffen",120,60;
-	close;
-
-L3:
-	warp "payon",160,90;
-	close;
-
-L4:
-	warp "izlude",128,145;
-	close;
-}
-EOF
-
-#################################
-# 7 - registrar scripts
-#################################
-
-if ! grep -q starter_items $RATHENA/npc/custom/custom.conf; then
-
-cat <<EOF >> $RATHENA/npc/custom/custom.conf
-
-// Casual mode NPCs
-npc: npc/custom/starter_items.txt
-npc: npc/custom/healer.txt
-npc: npc/custom/warper.txt
-
-EOF
-
-fi
-
-#################################
-# 8 - iniciar servidor
+# 6 - iniciar servidor
 #################################
 
 echo "=== Iniciando rAthena ==="
 
-cd $RATHENA
+cd /
 sh start.sh

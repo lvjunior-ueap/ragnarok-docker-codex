@@ -24,6 +24,11 @@ RUN sed -i 's|//login_ip|login_ip|g' /datastoresetup/usr-bin-rathena/conf/char_a
 RUN sed -i 's|//char_ip|char_ip|g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf
 RUN sed -i 's|//map_ip|map_ip|g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf
 
+# Corrigir host do banco para Docker
+RUN sed -i 's/sql.db_hostname:.*/sql.db_hostname: db/g' /datastoresetup/usr-bin-rathena/conf/inter_athena.conf || true
+RUN sed -i 's/sql.db_hostname:.*/sql.db_hostname: db/g' /datastoresetup/usr-bin-rathena/conf/map_athena.conf || true
+RUN sed -i 's/sql.db_hostname:.*/sql.db_hostname: db/g' /datastoresetup/usr-bin-rathena/conf/char_athena.conf || true
+
 COPY docker/rathena/start.sh /start.sh
 COPY docker/rathena/casual.sh /casual.sh
 RUN chmod +x /start.sh
