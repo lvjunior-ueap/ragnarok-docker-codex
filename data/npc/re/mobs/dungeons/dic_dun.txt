@@ -1,0 +1,45 @@
+//===== rAthena Script =======================================
+//= El Dicastes Dungeon Monster Spawn Script
+//===== By: ==================================================
+//= Kisuka
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Official monster spawns in El Dicastes Dungeon.
+//===== Additional Comments: =================================
+//= 1.0 Official spawns from Aegis [Kisuka]
+//= 1.1 Added Nightmare Scaraba Hole [Chilly]
+//= 1.2 Updated Nightmare spawns and names. [Euphy]
+//============================================================
+
+//==================================================
+// dic_dun01 - Underground Passage Kamidal Tunnel
+//==================================================
+dic_dun01,0,0	monster	One-Horned Scaraba	2171,50,5000
+dic_dun01,0,0	monster	Two-Horned Scaraba	1653,45,5000
+dic_dun01,0,0	monster	Scaraba Egg	2042,15,5000
+dic_dun01,0,0	monster	Scaraba Egg	1634,15,5000
+
+//==================================================
+// dic_dun02 - Underground Nest Scaraba Hole
+//==================================================
+dic_dun02,0,0	monster	Antler Scaraba	3020,50,5000
+dic_dun02,0,0	monster	Rake Scaraba	2417,45,5000
+dic_dun02,0,0	monster	Antler Scaraba Egg	1285,15,5000
+dic_dun02,0,0	monster	Rake Scaraba Egg	1956,15,5000
+dic_dun02,0,0,0,0	boss_monster	Scaraba Queen	2087,1,1856,0,1
+
+//==================================================
+// dic_dun03 - Nightmare Scaraba Hole
+//==================================================
+dic_dun03,0,0	monster	Gold One-Horn Scaraba Egg	2738,10,5000
+dic_dun03,0,0	monster	Gold Two-Horn Scaraba Egg	1886,10,5000
+dic_dun03,0,0	monster	Gold Antler Scaraba Egg	2130,10,5000
+dic_dun03,0,0	monster	Gold Rake Scaraba Egg	1682,10,5000
+dic_dun03,0,0	monster	Gold One-Horn Scaraba	1326,30,5000
+dic_dun03,0,0	monster	Gold Two-Horn Scaraba	1739,30,5000
+dic_dun03,0,0	monster	Gold Antler Scaraba	2998,40,5000
+dic_dun03,0,0	monster	Gold Rake Scaraba	2794,40,5000
+dic_dun03,0,0,0,0	boss_monster	Gold Queen Scaraba	2165,1,1607,0,1

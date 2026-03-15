@@ -43,6 +43,10 @@ services:
       - "6121:6121"
       - "5121:5121"
       - 8003:80
+    volumes:
+      - ./data/db:/usr/bin/rathena/db
+      - ./data/npc:/usr/bin/rathena/npc
+      - ./data/conf:/usr/bin/rathena/conf
 
 
 

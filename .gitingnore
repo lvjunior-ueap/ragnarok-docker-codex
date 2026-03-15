@@ -1,1 +1,19 @@
-./rathena
+# Ragnarok data (copyright)
+data/
+
+# runtime worlds
+worlds/
+
+# logs
+logs/
+
+# database dumps
+*.sql
+
+# python cache
+__pycache__/
+*.pyc
+
+# env
+.env
+.env.rando

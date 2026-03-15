@@ -1,0 +1,29 @@
+//===== rAthena Script =======================================
+//= Guild Dungeons Monster Spawn Script
+//===== By: ==================================================
+//= Athena (1.0)
+//===== Current Version: =====================================
+//= 1.1
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.0 First version
+//= 1.1 Updated spawns to official. [L0ne_W0lf]
+//============================================================
+
+//==================================================
+// schg_dun01 - Subterranean Guild Dungeon
+//==================================================
+schg_dun01,0,0	monster	Hell Apocalypse	1363,20
+schg_dun01,0,0	monster	Zakudam	1677,20
+schg_dun01,0,0	monster	Heavy Metaling	2881,15,5000
+schg_dun01,0,0	monster	Cobalt Mineral	2726,15,5000
+
+//==================================================
+// arug_dun01 - Subterranean Guild Dungeon
+//==================================================
+arug_dun01,0,0	monster	Banshee Master	2770,22
+arug_dun01,0,0	monster	Beholder master	1911,22,5000
+arug_dun01,0,0	monster	Aunoe	2156,22,5000
+arug_dun01,0,0	monster	Necromancer	1875,18
+arug_dun01,0,0	monster	Fanat	1979,5,5000

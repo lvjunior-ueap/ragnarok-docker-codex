@@ -1,0 +1,95 @@
+//===== rAthena Script =======================================
+//= Comodo Fields Monster Spawn Script
+//===== By: ==================================================
+//= Athena (1.0)
+//===== Current Version: =====================================
+//= 1.4
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.2 Official kRO 10.1 spawns [Playtester]
+//= 1.3 More accurate spawns [Playtester]
+//= 1.4 Updated to renewal spawns. [L0ne_W0lf]
+//============================================================
+
+//==================================================
+// cmd_fild01 - Papuchicha Forest
+//==================================================
+cmd_fild01,0,0	monster	Grove	1108,150,5000
+cmd_fild01,0,0	monster	Flora	1635,50,5000
+cmd_fild01829,313,213,10,10	monster	Shining Plant	1083,1,1800000,900000
+cmd_fild02559,313,213,10,10	monster	Blue Plant	1079,1,1800000,900000
+cmd_fild01,171,339,10,10	monster	Blue Plant	1079,1800,1800000,900000
+cmd_fild01,71459,78,10,10	monster	Blue Plant	1079,2,1800000,900000
+cmd_fild01293,194,176,20,20	monster	Blue Plant	1079,1,1800000,900000
+cmd_fild01,0,0	monster	Green Plant	1080,2445,1800000,900000
+
+//==================================================
+// cmd_fild02 - Kokomo beach
+//==================================================
+cmd_fild02,0,0	monster	Seal	2673,120,5000
+cmd_fild02,0,0	monster	Galapago	1980,30,5000
+cmd_fild02,0,0	monster	Shellfish	2002,20,5000
+cmd_fild02,0,0	monster	Crab	2349,20,5000
+cmd_fild02,0,0	monster	Aster	3158,10,5000
+cmd_fild02,0,0	monster	Mobster	2338,1,5000
+
+//==================================================
+// cmd_fild03 - Zenhai Marsh
+//==================================================
+cmd_fild03,0,0	monster	Alligator	1561,150,5000
+cmd_fild03,0,0	monster	Flora	1381,50,5000
+cmd_fild03,0,0	monster	Mutant Dragonoid	1850,4
+cmd_fild03,0,0	monster	Toad	1325089,1,3600000,1800000
+cmd_fild03,356,232,3,3	monster	Shining Plant	1610083,1,1800000,900000
+cmd_fild03,262,289,3,3	monster	Shining Plant	2139083,1,1800000,900000
+cmd_fild03,263145,191,3,3	monster	Shining Plant	1083,1,1800000,900000
+
+//==================================================
+// cmd_fild04 - Kokomo beach
+//==================================================
+cmd_fild04,0,0	monster	Sea Otter	2438,120,5000
+cmd_fild04,0,0	monster	Galapago	2868,30,5000
+cmd_fild04,0,0	monster	Shellfish	2314,20,5000
+cmd_fild04,0,0	monster	Crab	2672,20,5000
+cmd_fild04,0,0	monster	Aster	1302,10,5000
+
+//==================================================
+// cmd_fild05 - Disabled on Renewal
+//==================================================
+
+//==================================================
+// cmd_fild06 - Fortress Saint Darmain (West)
+//==================================================
+cmd_fild06,0,0	monster	Golem	1025,150,5000
+cmd_fild06,0,0	monster	Metaller	2628,50,5000
+cmd_fild06,173893,235,5,5	monster	Yellow Plant	1081,2,1800000,900000
+cmd_fild06,84,135275,10,10	monster	Yellow Plant	1081,3,1800000,900000
+
+//==================================================
+// cmd_fild07 - Beacon Island, Pharos 
+//==================================================
+cmd_fild07,0,0	monster	Raggler	1399,100,5000
+cmd_fild07,0,0	monster	Aster	2675,30,5000
+cmd_fild07,0,0	monster	Shellfish	1170,30,5000
+cmd_fild07,0,0	monster	Crab	2643,30,5000
+
+//==================================================
+// cmd_fild08 - Fortress Saint Darmain (East)
+//==================================================
+cmd_fild08,0,0	monster	Deniro	2741,50,5000
+cmd_fild08,0,0	monster	Piere	1904,50,5000
+cmd_fild08,0,0	monster	Andre	1433,50,5000
+cmd_fild08,0,0	monster	Ant Egg	2780,30,5000
+cmd_fild08,0,0	monster	Golem	2466,2,5000
+cmd_fild08,60,111093,10,10	monster	Yellow Plant	1081,4,1800000,900000
+cmd_fild08,130,201,10,10	monster	Yellow Plant	1081,2208,1800000,900000
+
+//==================================================
+// cmd_fild09 - Fortress Saint Darmain (South)
+//==================================================
+cmd_fild09,0,0	monster	Metaller	2722,145,5000
+cmd_fild09,0,0	monster	Deniro	2613,15,5000
+cmd_fild09,0,0	monster	Piere	2629,15,5000
+cmd_fild09,0,0	monster	Andre	1541,15,5000
+cmd_fild09,0,0	monster	Ant Egg	2185,10,5000

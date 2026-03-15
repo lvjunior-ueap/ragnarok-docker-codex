@@ -1,0 +1,30 @@
+//===== rAthena Script =======================================
+//= TE Guild Dungeon Monster
+//===== Description: =========================================
+//= Official monster spawn for TE Guild Dungeons
+//===== Changelogs: ==========================================
+//= 1.0 First version
+//============================================================
+
+// =======================
+// Gloria Guild Dungeon
+// =======================
+teg_dun01,0,0	monster	Knight Seyren	1219,20,5000
+teg_dun01,0,0	monster	Assassin Eremes	3109,15,5000
+teg_dun01,0,0	monster	Blacksmith Howard	3191,15,5000
+teg_dun01,0,0	monster	Hunter Cecil	1403,35,5000
+teg_dun01,0,0	monster	Wizard Kathryne	1828,30,5000
+teg_dun01,0,0	monster	Priest Margaretha	1534,20,5000
+teg_dun01,0,0,0,0	boss_monster	The Last One	2441,1,2856,0,0
+
+// =======================
+// Kafragaten Guild Dungeon
+// =======================
+teg_dun02,0,0	monster	Crusader Egnigem	2450,15,5000
+teg_dun02,0,0	monster	Rogue Wickebine	2934,15,5000
+teg_dun02,0,0	monster	Alchemist Armeyer	2483,15,5000
+teg_dun02,0,0	monster	Bard Kavach	1388,15,5000
+teg_dun02,0,0	monster	Dancer Josephina	2313,15,5000
+teg_dun02,0,0	monster	Sage Laurell	2365,15,5000
+teg_dun02,0,0	monster	Monk Errende	1961,15,5000
+teg_dun02,0,0,0,0	boss_monster	King of the Alley	2442,1,1556,0,0

@@ -1,0 +1,36 @@
+//===== rAthena Script =======================================
+//= Manuk Fields Monster Spawn Script
+//===== By: ==================================================
+//= alexx, MaC
+//===== Current Version: =====================================
+//= 1.1a
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.0 Official spawn ammounts from Aegis script [alexx]
+//= 1.1 Added 13.2 mob spawn update [scriptor]
+//= 1.1a Corrected fild2 mobs spawning on fild1. (bugreport:4248)
+//============================================================
+
+//==================================================
+// man_fild01 - Manuk Field
+//==================================================
+man_fild01,0,0	monster	Nepenthes	1732,105,5000
+man_fild01,0,0	monster	Centipede Larva	1763,30,5000
+man_fild01,0,0	monster	Hillslion	2737,10,5000
+man_fild01,0,0	monster	Centipede	1143,2,5000
+
+//==================================================
+// man_fild02 - Manuk Field
+//==================================================
+man_fild02,0,0	monster	Bradium Golem	2790,50,5000
+man_fild02,0,0	monster	Centipede	3004,35,5000
+man_fild02,0,0	monster	Tatacho	2418,25,5000
+
+//==================================================
+// man_fild03 - Manuk Field
+//==================================================
+man_fild03,0,0	monster	Hillslion	1683,25,5000
+man_fild03,0,0	monster	Tatacho	2157,25,5000
+man_fild03,0,0	monster	Centipede	2411,25,5000
+man_fild03,0,0	monster	Hardrock Mammoth	1192,1,14400000

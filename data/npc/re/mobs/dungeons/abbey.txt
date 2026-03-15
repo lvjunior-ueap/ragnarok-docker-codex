@@ -1,0 +1,50 @@
+//===== rAthena Script =======================================
+//= Abbey Dungeon Monster Spawn Script
+//===== By: ==================================================
+//= $ephiroth
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.0 Initial version [$ephiroth]
+//= 1.1 Updated spawns [Playtester]
+//= 1.2 More official spawns [Playtester]
+//============================================================
+
+//==================================================
+// nameless_n - Nameless Island
+//==================================================
+nameless_n,0,0	monster	Ghoul	1890,40,5000
+nameless_n,0,0	monster	Hellhound	1693,17,5000
+nameless_n,0,0	monster	Banshee	3216,16,5000
+nameless_n,0,0	monster	Ragged Zombie	1665,12,5000
+nameless_n,0,0	monster	Zombie Slaughter	2617,12,5000
+nameless_n,0,0	monster	Flame Skull	1286,3,5000
+
+//==================================================
+// abbey01 - Cursed Monastery
+//==================================================
+abbey01,0,0	monster	Banshee	2044,93,5000
+abbey01,0,0	monster	Ghoul	2043,56,5000
+abbey01,0,0	monster	Ragged Zombie	2137,33,5000
+abbey01,0,0	monster	Zombie Slaughter	1885,30,5000
+abbey01,0,0	monster	Hellhound	1585,25,5000
+abbey01,0,0	monster	Flame Skull	3227,21,5000
+
+//==================================================
+// abbey02 - Cursed Monastery
+//==================================================
+abbey02,0,0	monster	Zombie Slaughter	2794,210,5000
+abbey02,0,0	monster	Ragged Zombie	1933,70,5000
+abbey02,0,0	monster	Flame Skull	2714,21,5000
+abbey02,0,0	monster	Necromancer	2631,7,5000
+abbey02,236,78,21,18	boss_monster	Fallen Bishop	1871,1,1369,600000,1
+
+//==================================================
+// abbey03 - Cursed Monastery
+//==================================================
+abbey03,0,0	monster	Necromancer	1329,60,5000
+abbey03,0,0	monster	Banshee	2449,30,5000
+abbey03,0,0	monster	Flame Skull	3199,25,5000
+abbey03,0,0,0,0	boss_monster	Beelzebub	1873,1,2751,600000,1

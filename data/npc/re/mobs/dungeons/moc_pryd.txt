@@ -1,0 +1,81 @@
+//===== rAthena Script =======================================
+//= Morocc Pyramid Dungeon Monster Spawn Script
+//===== By: ==================================================
+//= Athena (1.0)
+//===== Current Version: =====================================
+//= 1.4
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.1 Official kRO 10.1 spawns [Playtester]
+//= 1.2 More accurate spawns [Playtester]
+//= 1.3 Corrected MVP spawn variance. [L0ne_W0lf]
+//= 1.4 Added Nightmare spawns. [Euphy]
+//============================================================
+
+//==================================================
+// moc_pryd01 - Inside Pyramid F1
+//==================================================
+moc_pryd01,0,0	monster	Familiar	1595,50,5000
+moc_pryd01,0,0	monster	Poporing	2243,20,5000
+
+//==================================================
+// moc_pryd02 - Inside Pyramid F2
+//==================================================
+moc_pryd02,0,0	monster	Mummy	2689,30,5000
+moc_pryd02,0,0	monster	Soldier Skeleton	2155,30,5000
+moc_pryd02,0,0	monster	Archer Skeleton	2800,30,5000
+moc_pryd02,0,0	monster	Drainliar	2907,20,5000
+moc_pryd02,0,0	monster	Poporing	1375,20,5000
+moc_pryd02,0,0	monster	Isis	2345,5,5000
+
+//==================================================
+// moc_pryd03 - Inside Pyramid F3
+//==================================================
+moc_pryd03,0,0	monster	Mummy	2715,70,5000
+moc_pryd03,0,0	monster	Verit	2155,20,5000
+moc_pryd03,0,0	monster	Matyr	2627,10,5000
+moc_pryd03,0,0	monster	Drainliar	1191,5,5000
+moc_pryd03,0,0	monster	Mimic	1768,5,5000
+
+//==================================================
+// moc_pryd04 - Inside Pyramid F4
+//==================================================
+moc_pryd04,0,0	monster	Isis	2081,50,5000
+moc_pryd04,0,0	monster	Mummy	1983,25,5000
+moc_pryd04,0,0	monster	Matyr	2715,20,5000
+moc_pryd04,0,0	monster	Mimic	1042,15,5000
+moc_pryd04,0,0	monster	Ancient Mummy	1777,3,5000
+moc_pryd04,0,0,0,0	boss_monster	Osiris	1038,1,3506,600000,0
+
+//==================================================
+// moc_pryd05 - Inside Pyramid B1
+//==================================================
+moc_pryd05,0,0	monster	Minorous	2603,60,5000
+moc_pryd05,0,0	monster	Verit	1129,50,5000
+moc_pryd05,0,0	monster	Mummy	1507,10,5000
+
+//==================================================
+// moc_pryd06 - Inside Pyramid B2
+//==================================================
+moc_pryd06,0,0	monster	Mimic	1847,30,5000
+moc_pryd06,0,0	monster	Verit	1418,30,5000
+moc_pryd06,0,0	monster	Arclouze	2764,20,5000
+moc_pryd06,0,0	monster	Ancient Mummy	1794,20,5000
+moc_pryd06,102,85,1,1	boss_monster	Amon Ra	1511,1,1554,600000,0
+
+//==================================================
+// moc_prydn1 - Nightmare Mode B1
+//==================================================
+moc_prydn1,0,0	monster	Nightmare Minorous	1902,60,5000
+moc_prydn1,0,0	monster	Nightmare Mummy	2557,10,5000
+moc_prydn1,0,0	monster	Nightmare Verit	1262,50,5000
+
+//==================================================
+// moc_prydn2 - Nightmare Mode B2
+//==================================================
+moc_prydn2,0,0	monster	Nightmare Mimic	1311,30,5000
+moc_prydn2,0,0	monster	Nightmare Verit	2767,30,5000
+moc_prydn2,0,0	monster	Nightmare Arclouze	3004,20,5000
+moc_prydn2,0,0	monster	Nightmare Ancient Mummy	1554,20,5000
+moc_prydn2,102,85,1,1	boss_monster	Nightmare Amon Ra	2362,1,2277,600000,1

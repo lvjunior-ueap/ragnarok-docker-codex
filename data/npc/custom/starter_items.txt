@@ -1,0 +1,22 @@
+-	script	Starter_Items	-1,{
+
+OnPCLoginEvent:
+	if (#starter_items_given == 0) {
+		getitem 501,150;
+		getitem 4002,2;
+		getitem 4003,1;
+		getitem 4012,2;
+		getitem 969,3;
+		getitem 616,25;
+		getitem 2060,20;
+		getitem 2059,20;
+		getitem 12323,90;
+		getitem 2102,1;
+		getitem 2306,1;
+		getitem 1207,1;
+
+		#starter_items_given = 1;
+		dispbottom "Você recebeu 150 poções iniciais e mais!";
+	}
+	end;
+}

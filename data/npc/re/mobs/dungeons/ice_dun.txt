@@ -1,0 +1,38 @@
+//===== rAthena Script =======================================
+//= Ice Dungeon Monster Spawn Script
+//===== By: ==================================================
+//= Athena (1.0)
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.0 First version from jAthena [Playtester]
+//= 1.1 More accurate spawns [Playtester]
+//= 1.2 Removed Ktullanux spawn, quest implemented [L0ne_W0lf]
+//============================================================
+
+//==================================================
+// ice_dun01 - Ice Cave
+//==================================================
+ice_dun01,0,0	monster	Siroma	1583,75,5000
+ice_dun01,0,0	monster	Roween	2075,5,5000
+ice_dun01,0,0	monster	Muscipular	2730,5,5000
+ice_dun01,0,0	monster	Gazeti	2709,2,5000
+
+//==================================================
+// ice_dun02 - Ice Cave
+//==================================================
+ice_dun02,0,0	monster	Snowier	1067,70,5000
+ice_dun02,0,0	monster	Siroma	2775,30,5000
+ice_dun02,0,0	monster	Iceicle	2862,19,5000
+ice_dun02,0,0	monster	Gazeti	1839,15,5000
+ice_dun02,0,0	monster	Ice Titan	1783,7,5000
+
+//==================================================
+// ice_dun03 - Ice Cave
+//==================================================
+ice_dun03,0,0	monster	Ice Titan	3217,70,5000
+ice_dun03,0,0	monster	Gazeti	1148,42,5000
+ice_dun03,0,0	monster	Iceicle	1259,32,5000
+ice_dun03,0,0	monster	Snowier	2884,15,5000

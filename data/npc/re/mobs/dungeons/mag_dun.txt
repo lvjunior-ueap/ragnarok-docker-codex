@@ -1,0 +1,32 @@
+//===== rAthena Script =======================================
+//= Magma Dungeon Monster Spawn Script
+//===== By: ==================================================
+//= Athena (1.0)
+//===== Current Version: =====================================
+//= 1.3
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.1 fixed 2,3,4 tabs instead of 1... and wrong mob names [Lupus]
+//= 1.2 Official jRO 10.3 spawns [Playtester]
+//= 1.3 More accurate spawns [Playtester]
+//============================================================
+
+//==================================================
+// mag_dun01 - Nogg Road
+//==================================================
+mag_dun01,0,0	monster	Explosion	2906,30,5000
+mag_dun01,0,0	monster	Lava Golem	2312,20,5000
+mag_dun01,0,0	monster	Blazer	3243,20,5000
+mag_dun01,0,0	monster	Kaho	1517,20,5000
+mag_dun01,0,0	monster	Grizzly	1188,10,5000
+
+//==================================================
+// mag_dun02 - Nogg Road
+//==================================================
+mag_dun02,0,0	monster	Nightmare Terror	1855,46,5000
+mag_dun02,0,0	monster	Deleter	2193,40,5000
+mag_dun02,0,0	monster	Deleter	1152,38,5000
+mag_dun02,0,0	monster	Blazer	2549,20,5000
+mag_dun02,0,0	monster	Diabolic	2157,15,5000
+mag_dun02,0,0	monster	Gig	2541,10,5000

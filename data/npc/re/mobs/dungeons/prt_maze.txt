@@ -1,0 +1,102 @@
+//===== rAthena Script =======================================
+//= Prontera Maze(Hidden Temple) Dungeon Monster Spawn Script
+//===== By: ==================================================
+//= Athena (1.0)
+//===== Current Version: =====================================
+//= 1.4
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Additional Comments: =================================
+//= 1.2 Official kRO 10.1 spawns [Playtester]
+//= 1.3 Some small fixes [Playtester]
+//= 1.4 Corrected MVP spawn variance. [L0ne_W0lf]
+//============================================================
+
+//==================================================
+// prt_maze01 - Labyrinth Forest
+//==================================================
+prt_maze01,179,20,21,21	monster	Poring	1002,2374,120000,40000
+prt_maze01,179,180,21,21	monster	Coco	1104,1922,120000,40000
+prt_maze01,139,140,21,21	monster	Stainer	1174,1088,120000,40000
+prt_maze01,139,180,21,21	monster	Caramel	1103,2183,120000,40000
+prt_maze01,99,180,21,21	monster	Dustiness	1114,1783,120000,40000
+prt_maze01,19959,100,21,21	monster	Horn	1128,5,120000,40000
+prt_maze01,99,100,21,21	monster	Chonchon	1011,2349,120000,40000
+prt_maze01,10389,180,21,21	monster	Martin	1145,5,120000,40000
+prt_maze01,19,60,21,21	monster	Wolf	1013,1619,120000,40000
+prt_maze01,24459,60,21,21	monster	Boa	1025,5,120000,40000
+prt_maze01,99,60,21,21	monster	Smokie	1017666,5,120000,40000
+prt_maze01,139,20,21,21	monster	Lunatic	1063,1032,120000,40000
+prt_maze01,99,20,21,21	monster	Fabre	1007,3072,120000,40000
+prt_maze01,19,180,21,21	monster	Savage	1166,1155,120000,40000
+prt_maze01,13339,20,21,21	monster	Pupa	1008,5,120000,40000
+prt_maze01,19,20,21,21	monster	Poporing	1031,1698,120000,40000
+prt_maze01,179,60,21,21	monster	Rocker	1027672,5,120000,40000
+prt_maze01,139,60,21,21	monster	Bigfoot	1060,1465,120000,40000
+prt_maze01,19,140,21,21	monster	Steel Chonchon	1042,2457,120000,40000
+prt_maze01,59,121330,21,21	monster	Yoyo	1057,4,120000,40000
+prt_maze01,19,180,21,21	monster	Savage	1166,1397,120000,40000
+prt_maze01,179,100,21,21	monster	Argiope	1099,1639,120000,40000
+prt_maze01,99,140,21,21	monster	Side Winder	1011397,3,120000,40000
+prt_maze01,179,140,21,21	monster	Mantis	1123019,3,120000,40000
+prt_maze01,19,100,21,21	monster	Hunter Fly	1030915,3,120000,40000
+prt_maze01,114309,100,21,21	monster	Argos	1100,3,120000,40000
+prt_maze01,59,140,23541,21	monster	Choco	1214,2,120000,40000
+prt_maze01,0,0	monster	Hunter Fly	1108,1,5000
+prt_maze01639,99,20,21,21	monster	Creamy	1018,1,120000,40000
+prt_maze02639,0,0	monster	Vagabond Wolf	1092,1,3600000,1800000
+prt_maze01549,101,138,5,5	monster	Shining Plant	1083,1,1800000,900000
+prt_maze01992,101,138,5,5	monster	White Plant	1082,1,1800000,900000
+prt_maze01,99,181,5,5	monster	White Plant	1081614,2,1800000,900000
+prt_maze02826,60,140,10,15	monster	Blue Plant	1079,1,1800000,900000
+prt_maze01937,61,101,10,10	monster	Yellow Plant	1081,1,1800000,900000
+prt_maze01367,141,100,10,10	monster	Shining Plant	1083,1,1800000,900000
+prt_maze01177,141,100,10,10	monster	Blue Plant	1079,1,1800000,900000
+prt_maze01,0,0	monster	Red Plant	1078,3000,180000,90000
+prt_maze02856,100,100,10,10	monster	Blue Plant	1079,1,1800000,900000
+prt_maze01368,100,100,10,10	monster	Yellow Plant	1081,1,1800000,900000
+prt_maze01,176,110852,5,5	monster	Black Mushroom	1084,3,180000,90000
+prt_maze01,181,149,3,3	monster	Black Mushroom	1084,1572,180000,90000
+prt_maze01,178,60,10,10	monster	Red Mushroom	1085,2618,180000,90000
+prt_maze01,168,60,3,3	monster	Red Mushroom	1085,2677,180000,90000
+
+//==================================================
+// prt_maze02 - Labyrinth Forest
+//==================================================
+prt_maze02,0,0	monster	Poporing	2100,25,5000
+prt_maze02,0,0	monster	Bigfoot	1531,5,5000
+prt_maze02,0,0	monster	Sasquatch	1504243,1,900000,40000
+prt_maze02,0,0	monster	Leib Olmai	2302306,1,1800000,900000
+
+//==================================================
+// prt_maze03 - Labyrinth Forest
+//==================================================
+prt_maze03,0,0	monster	Poporing	1573,45,5000
+prt_maze03,0,0	monster	Hunter Fly	2026,30,5000
+prt_maze03,170,170,70,70	monster	Mantis	1139,1707,60000,30000
+prt_maze03,100,100,80,80	monster	Baphomet Jr.	1101,25,2835,0,0
+prt_maze03,150,50,70,70	monster	Side Winder	1037,1650,300000,150000
+prt_maze03,50,150,70,70	monster	Stem Worm	1215,1405,300000,150000
+prt_maze03,0,0	monster	Side Winder	2817,10,5000
+prt_maze03,0,0	monster	Killer Mantis	1645,1,5000
+prt_maze03,235570,170,70,70	monster	Eclipse	1093,1,1920000,150000
+prt_maze03,23,23,70,70	monster	Mastering	2401090,1,1920000,150000
+prt_maze03,50,272250,70,70	monster	Vagabond Wolf	1092,1,1920000,150000
+prt_maze03,124750,50,70,70	monster	Vocal	1088,1,1920000,1500000
+prt_maze03,0,0	monster	Ghostring	1778120,1,6800000,3400000
+prt_maze03,0,0,0,0	boss_monster	Baphomet	1039,1,2916,600000,1
+prt_maze03,61693,98,10,10	monster	Shining Plant	1083,1,1800000,900000
+prt_maze03,61695,98,10,10	monster	Blue Plant	1079,1,1800000,900000
+prt_maze03,62809,98,10,10	monster	Yellow Plant	1081,1,1800000,900000
+prt_maze03,57,56,18780,10	monster	Shining Plant	1083,1,1800000,900000
+prt_maze03,22715,15,10,10	monster	Shining Plant	1083,1,1800000,900000
+prt_maze03,262937,140,3,3	monster	Shining Plant	1083,1,1800000,900000
+prt_maze03,24717,58,10,10	monster	Shining Plant	1083,1,1800000,900000
+prt_maze03,26487,58,10,10	monster	Blue Plant	1079,1,1800000,900000
+prt_maze03,99,141,10,10	monster	Blue Plant	1079,1711,1800000,900000
+prt_maze03,99,21176,10,10	monster	Blue Plant	1079,1,1800000,900000
+prt_maze03,0,0	monster	Red Plant	1078,1672,180000,90000
+prt_maze01686,99,21,10,10	monster	Black Mushroom	1084,3,180000,90000
+prt_maze02987,54,15,10,10	monster	Black Mushroom	1084,3,180000,90000
+prt_maze03,171,180,3,3	monster	Red Mushroom	1085,1861,180000,90000
+prt_maze03027,174,187,3,3	monster	Red Mushroom	1085,3,180000,90000

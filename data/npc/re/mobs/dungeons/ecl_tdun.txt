@@ -1,0 +1,39 @@
+//===== rAthena Script =======================================
+//= Bifrost Tower Monster Spawn Script
+//===== By: ==================================================
+//= refis
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= jRO monster spawns, taken from Auriga.
+//===== Additional Comments: =================================
+//= 1.0 First version. [Euphy]
+//============================================================
+
+//==================================================
+// ecl_tdun01 - Bifrost Tower F1
+//==================================================
+ecl_tdun01.gat,0,0	monster	Cenere	3244,5,5000
+ecl_tdun01.gat,0,0	monster	Antique Book	2378,5,5000
+ecl_tdun01.gat,0,0	monster	Blue Lichtern	1690,5,5000
+
+//==================================================
+// ecl_tdun02 - Bifrost Tower F2
+//==================================================
+ecl_tdun02.gat,0,0	monster	Cenere	2254,10,5000
+ecl_tdun02.gat,0,0	monster	Antique Book	1916,10,5000
+ecl_tdun02.gat,0,0	monster	Blue Lichtern	3237,15,5000
+ecl_tdun02.gat,0,0	monster	Yellow Lichtern	3040,5,5000
+
+//==================================================
+// ecl_tdun03 - Bifrost Tower F3
+//==================================================
+ecl_tdun03.gat,0,0	monster	Cenere	2561,15,5000
+ecl_tdun03.gat,0,0	monster	Antique Book	1817,15,5000
+ecl_tdun03.gat,0,0	monster	Blue Lichtern	2398,5,5000
+ecl_tdun03.gat,0,0	monster	Yellow Lichtern	2134,15,5000
+ecl_tdun03.gat,0,0	monster	Red Lichtern	3212,10,5000
+ecl_tdun03.gat,0,0	monster	Green Lichtern	2288,15,5000
+ecl_tdun03.gat,0,0	monster	Faithful Manager	1911,5,5000

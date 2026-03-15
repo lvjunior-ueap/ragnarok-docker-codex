@@ -1,0 +1,31 @@
+//===== rAthena Script =======================================
+//= Malaya Port Field Monster Spawn Script
+//===== By: ==================================================
+//= Chilly
+//===== Current Version: =====================================
+//= 1.2
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Official kRO monster spawns
+//===== Additional Comments: =================================
+//= 1.0 First Release
+//= 1.1 Renewal spawn update.
+//= 1.2 Updated spawns.
+//============================================================
+
+//==================================================
+// ma_fild01 - Barrio Maligawa
+//==================================================
+ma_fild01,0,0	monster	Tikbalang	1618,50,5000
+ma_fild01,0,0	monster	Tiyanak	1165,50,5000
+ma_fild01,0,0	monster	Jejeling	1729,30,5000
+
+//==================================================
+// ma_fild02 - Malaya Forest
+//==================================================
+ma_fild02,0,0	monster	Bungisngis	1353,40,5000
+ma_fild02,0,0	monster	Engkanto	1625,25,5000
+ma_fild02,0,0	monster	Mangkukulam	1789,30,5000
+ma_fild02,0,0	monster	Jejeling	2087,20,5000
+ma_fild02,0,0	monster	Wakwak	1518,25,5000
