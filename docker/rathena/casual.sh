@@ -83,7 +83,7 @@ NPCCONF=$RATHENA/npc/scripts_custom.conf
 echo "=== Ativando NPCs CASUAL ==="
 
 enable_npc() {
-    sed -i "s|//npc/custom/$1|npc: npc/custom/$1|" $NPCCONF || true
+    sed -i "s|//npc: npc/custom/$1|npc: npc/custom/$1|" "$NPCCONF" || true
 }
 
 enable_npc warper.txt
@@ -93,6 +93,11 @@ enable_npc card_remover.txt
 enable_npc platinum_skills.txt
 enable_npc resetnpc.txt
 enable_npc jobmaster.txt
+
+# garantir starter items
+if ! grep -q "starter_items.txt" "$NPCCONF"; then
+    echo "npc: npc/custom/starter_items.txt" >> "$NPCCONF"
+fi
 
 #################################
 # 5 - garantir carregamento dos NPCs custom
