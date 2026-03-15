@@ -1,6 +1,10 @@
 # Ragnarok data (copyright)
-data/
-data_base/
+data/*
+!data/.keep
+
+data_base/*
+!data_base/.keep
+
 
 # runtime worlds
 worlds/
