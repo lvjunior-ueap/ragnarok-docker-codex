@@ -15,8 +15,8 @@ echo "Rathena path: $RATHENA"
 # 1 - EXP rates
 #################################
 
-sed -i 's/base_exp_rate:.*/base_exp_rate: 3300/' $RATHENA/conf/battle/exp.conf || true
-sed -i 's/job_exp_rate:.*/job_exp_rate: 3300/' $RATHENA/conf/battle/exp.conf || true
+sed -i 's/base_exp_rate:.*/base_exp_rate: 33000/' $RATHENA/conf/battle/exp.conf || true
+sed -i 's/job_exp_rate:.*/job_exp_rate: 33000/' $RATHENA/conf/battle/exp.conf || true
 
 #################################
 # 2 - DROP rates
@@ -54,26 +54,37 @@ OnPCLoginEvent:
 EOF
 
 #################################
-# 5 - registrar NPCs existentes
+# 5 - ativar NPCs existentes
 #################################
 
-CUSTOMCONF=$RATHENA/npc/custom/custom.conf
-touch $CUSTOMCONF
+NPCCONF=$RATHENA/npc/scripts_custom.conf
 
-add_npc() {
-    if ! grep -q "$1" $CUSTOMCONF; then
-        echo "npc: npc/custom/$1" >> $CUSTOMCONF
-    fi
+echo "=== Ativando NPCs CASUAL ==="
+
+enable_npc() {
+    sed -i "s|//npc: npc/custom/$1|npc: npc/custom/$1|" $NPCCONF || true
 }
 
-echo "// Casual Mode NPCs" >> $CUSTOMCONF
+enable_npc warper.txt
+enable_npc healer.txt
+enable_npc stylist.txt
+enable_npc card_remover.txt
+enable_npc platinum_skills.txt
+enable_npc resetnpc.txt
 
-add_npc starter_items.txt
-add_npc healer.txt
-add_npc warper.txt
-add_npc stylist.txt
-add_npc card_remover.txt
-add_npc platinum_skills.txt
+#################################
+# 5 - garantir carregamento dos NPCs custom
+#################################
+
+ATHENACONF="$RATHENA/npc/scripts_athena.conf"
+
+echo "=== Garantindo scripts_custom.conf ==="
+
+if ! grep -q "scripts_custom.conf" "$ATHENACONF"; then
+    echo "npc: npc/scripts_custom.conf" >> "$ATHENACONF"
+    echo "scripts_custom.conf adicionado ao scripts_athena.conf"
+fi
+
 
 #################################
 # 6 - iniciar servidor
