@@ -37,11 +37,11 @@ sleep 10
 
 echo "=== Gerando database web ==="
 
-cd /datastoresetup/usr-bin-rathena/db/re
+cd /usr/bin/rathena/db/re
 
 python3 /build_ro_database.py || echo "Database generation failed"
 
 echo "=== Database gerada ==="
 
 # manter container vivo mostrando logs
-tail -f /datastore/usr-bin-rathena/log/map-server.log
+tail -f /usr/bin/rathena/log/map-server.log
