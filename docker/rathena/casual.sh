@@ -2,6 +2,21 @@
 
 set -e
 
+if pgrep -f map-server > /dev/null
+then
+  echo "rAthena est   rodando, parando..."
+  cd /usr/bin/rathena
+  sh ./athena-start stop
+fi
+
+
+echo "=== Parando rAthena se estiver rodando ==="
+
+cd /usr/bin/rathena
+
+sh ./athena-start stop || true
+
+
 #################################
 # path
 #################################
