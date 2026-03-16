@@ -25,7 +25,7 @@ echo "Parando servidor..."
 docker compose down || true
 
 #################################
-# limpar world atual
+# limpar mundo atual
 #################################
 
 echo
@@ -65,6 +65,15 @@ echo "Executando randomizer..."
 bash scripts/randomize_world.sh
 
 #################################
+# rebuild container
+#################################
+
+echo
+echo "Rebuildando containers..."
+
+docker compose build
+
+#################################
 # subir servidor
 #################################
 
@@ -73,8 +82,16 @@ echo "Subindo servidor..."
 
 docker compose up -d
 
+#################################
+# status
+#################################
+
+echo
+echo "Containers ativos:"
+docker compose ps
+
 echo
 echo "================================="
-echo "Mundo criado!"
+echo "Mundo criado com sucesso!"
 echo "Seed: $SEED"
 echo "================================="

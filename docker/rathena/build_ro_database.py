@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import glob
 import os
 import json
 import shutil
@@ -128,31 +129,44 @@ def parse_drops(items):
     return item_to_mobs, mob_to_items
 
 
+
 def parse_spawns():
 
-    map_to_mobs = {}
-    mob_spawn = {}
+    map_to_mobs={}
+    mob_spawn={}
 
-    if not os.path.exists(MOB_SPAWN):
-        return mob_spawn, map_to_mobs
+    spawn_files = glob.glob("../../npc/re/mobs/**/*.txt", recursive=True)
 
-    with open(MOB_SPAWN, encoding="utf8", errors="ignore") as f:
+    print("Spawn files found:",len(spawn_files))
 
-        for line in f:
+    for file in spawn_files:
 
-            if line.startswith("//") or not line.strip():
-                continue
+        with open(file, encoding="utf8", errors="ignore") as f:
 
-            cols = line.split(",")
+            for line in f:
 
-            mapname = cols[0]
-            mob_id = cols[3]
+                if "monster" not in line:
+                    continue
 
-            mob_spawn.setdefault(mob_id, []).append(mapname)
-            map_to_mobs.setdefault(mapname, []).append(mob_id)
+                parts=line.split(",")
+
+                if len(parts) < 4:
+                    continue
+
+                mapname=parts[0].strip()
+
+                try:
+                    mob_id=parts[3].strip()
+                except:
+                    continue
+
+                mob_spawn.setdefault(mob_id,[])
+                mob_spawn[mob_id].append(mapname)
+
+                map_to_mobs.setdefault(mapname,[])
+                map_to_mobs[mapname].append(mob_id)
 
     return mob_spawn, map_to_mobs
-
 
 def write_json(name, data):
 

@@ -66,7 +66,9 @@ cat <<EOF > $RATHENA/npc/custom/starter_items.txt
 
 OnPCLoginEvent:
 	if (#starter_items_given == 0) {
-		getitem 501,150;
+		getitem 611,10000; // lupa
+		dispbottom "Você recebeu 10000 lupas iniciais!";
+                getitem 501,150;		
 		getitem 4002,2;
 		getitem 4003,1;
 		getitem 4012,2;

@@ -21,35 +21,74 @@ MOB_DB=env["MOB_DB_PATH"]
 
 DB=f"{ROOT}/{MOB_DB}"
 
-PASSIVE=int(env.get("AI_PASSIVE","0x01"),16)
-AGGRESSIVE=int(env.get("AI_AGGRESSIVE","0x81"),16)
-
 seed=int(os.environ.get("WORLD_SEED_NUMERIC",0))
 random.seed(seed)
 
-print("Randomizing monster AI...")
+print("Applying conservative AI randomization...")
+
+# personalidade do mundo
+world_mood=random.choice([
+    "calm",
+    "normal",
+    "hostile"
+])
+
+print("World AI mood:",world_mood)
+
+lines=[]
 
 with open(DB) as f:
-    lines=f.readlines()
 
-new=[]
+    for line in f:
 
-for line in lines:
+        if line.startswith("//") or line.strip()=="":
+            lines.append(line)
+            continue
 
-    if line.startswith("//") or line.strip()=="":
-        new.append(line)
-        continue
+        cols=line.split(",")
 
-    c=line.split(",")
+        try:
+            mob_id=int(cols[0])
+            level=int(cols[3])
+            mode=int(cols[26])
+        except:
+            lines.append(line)
+            continue
 
-    if random.random()<0.5:
-        c[26]=str(PASSIVE)
-    else:
-        c[26]=str(AGGRESSIVE)
+        # detectar MVP
+        is_mvp = (mode & 0x20) != 0
 
-    new.append(",".join(c))
+        if is_mvp:
+            lines.append(line)
+            continue
+
+        # mobs muito fracos ficam iguais
+        if level < 20:
+            lines.append(line)
+            continue
+
+        # alterar só agressividade
+        aggressive_bit = 0x80
+
+        if world_mood == "calm":
+
+            # remover agressividade às vezes
+            if random.random() < 0.4:
+                mode = mode & ~aggressive_bit
+
+        elif world_mood == "hostile":
+
+            # adicionar agressividade às vezes
+            if random.random() < 0.4:
+                mode = mode | aggressive_bit
+
+        # normal = não mexe
+
+        cols[26]=str(mode)
+
+        lines.append(",".join(cols))
 
 with open(DB,"w") as f:
-    f.writelines(new)
+    f.writelines(lines)
 
-print("AI randomized.")
+print("AI randomization complete.")

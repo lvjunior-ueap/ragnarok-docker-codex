@@ -19,6 +19,10 @@ echo "Stopping server..."
 
 docker exec ragnarok-server sh -c "cd /usr/bin/rathena && sh ./athena-start stop" || true
 
+#################################
+# RANDOMIZERS
+#################################
+
 if [ "$ENABLE_RANDOM_DROPS" = true ]; then
     echo "Randomizing drops..."
     python3 tools/randomize_drops.py
@@ -43,5 +47,40 @@ if [ "$ENABLE_RANDOM_SPAWNS" = true ]; then
     echo "Randomizing spawns..."
     python3 tools/randomize_spawns.py
 fi
+
+#################################
+# NEW FEATURES
+#################################
+
+if [ "$ENABLE_RANDOM_AFFIXES" = true ]; then
+    echo "Randomizing equipment affixes..."
+    python3 tools/randomize_affixes.py
+fi
+
+if [ "$ENABLE_ALLOW_ALL_DROPS" = true ]; then
+    echo "Allowing all items to be dropped..."
+    python3 tools/allow_all_drops.py
+fi
+
+if [ "$ENABLE_MAGNIFIER_LIGHTER" = true ]; then
+    echo "Fixing Magnifier weight..."
+    python3 tools/magnifier_zero_weight.py
+fi
+
+#################################
+# MOB BUFFS
+#################################
+
+if [ "$ENABLE_RANDOM_MOB_BUFFS" = true ]; then
+    echo "Generating mob buff skills..."
+    python3 tools/generate_mob_buffs.py
+fi
+
+if [ "$ENABLE_RANDOM_MOB_NAMES" = true ]; then
+    echo "Randomizing monster names..."
+    python3 tools/randomize_mob_names.py
+fi
+
+
 
 echo "World generation complete."
