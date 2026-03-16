@@ -1,485 +1,396 @@
-# Ragnarok Docker Server
+# Ragnarok Procedural Server (rAthena + Docker)
 
-Ambiente Docker para execução de um servidor **Ragnarok Online baseado em rAthena (2017–2018)** com foco em:
+Este projeto fornece um ambiente completo para execução de um **servidor Ragnarok Online baseado em rAthena** dentro de containers Docker, com foco em:
 
-- automação
-- reprodutibilidade
-- debugging
-- desenvolvimento de sistemas customizados
-- ferramentas auxiliares para análise do servidor
+* automação de servidor
+* geração procedural de mundos
+* experimentação de sistemas de jogo
+* debugging de servidores Ragnarok
+* reprodutibilidade de ambientes
 
-O projeto adiciona várias ferramentas e melhorias sobre o rAthena padrão, incluindo:
-
-- geração automática de database web
-- scanner de configuração
-- presets de servidor (modo casual)
-- automação de configuração do servidor
+O projeto nasceu como um ambiente de desenvolvimento para explorar **modificações experimentais do rAthena**, incluindo randomização de conteúdo e análise automatizada da base do servidor.
 
 ---
 
-# Objetivo do Projeto
+# Filosofia do Projeto
 
-Criar um **ambiente de servidor Ragnarok moderno e controlado**, que permita:
+Este projeto não tenta apenas "rodar um servidor Ragnarok".
 
-- rodar o servidor facilmente via Docker
-- investigar o funcionamento interno do rAthena
-- automatizar configuração do servidor
-- desenvolver sistemas customizados
+Ele tenta transformar o servidor em algo **reprodutível, explorável e experimental**.
 
-O ambiente foi construído também como **plataforma experimental** para futuros sistemas como:
+Algumas ideias centrais do projeto:
 
-- progressão radial de mundo
-- randomização procedural de drops
-- geração automática de database
+* servidores efêmeros
+* mundos gerados por seed
+* automação completa do ambiente
+* separação clara entre dados base e dados modificados
+* infraestrutura leve baseada em Docker
+
+Isso permite experimentar ideias como:
+
+* mundos aleatórios
+* drops proceduralmente gerados
+* progressão dinâmica de mapas
+* variações de dificuldade
+
+Cada mundo pode ser recriado usando apenas uma **seed**.
+
+---
+
+# Características do Projeto
+
+O ambiente adiciona diversas camadas sobre o rAthena tradicional.
+
+Principais funcionalidades:
+
+### Ambiente containerizado
+
+O servidor roda inteiramente dentro de containers Docker:
+
+* rAthena (server)
+* MariaDB
+* phpMyAdmin
+* roBrowserLegacy
+* wsproxy
+
+Isso garante que o ambiente seja **reproduzível em qualquer máquina**.
+
+---
+
+### Sistema de geração de mundos
+
+O projeto inclui um sistema que permite gerar mundos diferentes usando seeds.
+
+Script principal:
+
+```
+new_world.sh
+```
+
+Exemplo:
+
+```
+./new_world.sh wolfie-maxxer
+```
+
+Esse script executa automaticamente:
+
+1. parar o servidor
+2. restaurar a base limpa
+3. aplicar randomizers
+4. reiniciar o servidor
+
+---
+
+### Separação entre base limpa e dados modificáveis
+
+Para evitar problemas de licença e permitir experimentação segura, o projeto separa:
+
+```
+data_base/
+```
+
+Base limpa do rAthena.
+
+e
+
+```
+data/
+```
+
+Dados modificados pelo servidor e pelos randomizers.
+
+A base original **não é incluída no repositório**.
+
+---
+
+### Ferramentas de análise do servidor
+
+O projeto inclui diversas ferramentas para investigar o funcionamento do rAthena.
+
+Exemplo:
+
+```
+tools/
+```
+
+Ferramentas de:
+
+* parsing de database
+* geração de documentação
+* análise de configuração
+* experimentos de randomização
 
 ---
 
 # Arquitetura do Ambiente
 
-O ambiente utiliza **Docker Compose** para orquestrar múltiplos serviços.
+O ambiente utiliza **Docker Compose** para orquestrar todos os serviços necessários.
 
-Serviços principais:
+Componentes principais:
 
-| Serviço | Função |
-|------|------|
-| rAthena | servidor do jogo |
-| MariaDB | banco de dados |
-| Apache | servidor web |
-| phpMyAdmin | administração do banco |
-| roBrowserLegacy | cliente web |
-| wsproxy | bridge websocket |
+| Serviço         | Função                 |
+| --------------- | ---------------------- |
+| rAthena         | servidor do jogo       |
+| MariaDB         | banco de dados         |
+| phpMyAdmin      | administração do banco |
+| Apache          | servidor web           |
+| roBrowserLegacy | cliente web            |
+| wsproxy         | bridge websocket       |
 
 ---
 
 # Estrutura do Projeto
 
-
+```
 ragnarok-docker/
 
 docker/
-└ rathena/
-├ Dockerfile
-├ start.sh
-├ casual.sh
-├ build_ro_database.py
-├ database.html
-└ cat_python.py
+    rathena/
+        Dockerfile
+        start.sh
 
-docker-compose.yml
+tools/
+scripts/
 
 data/
+data_base/
+
 sql-init/
-scripts/
+
 docs/
 
+docker-compose.yml
+new_world.sh
+copia-base.sh
+setup-rathena-data_base-external.sh
+```
 
 ---
 
-# Arquitetura Interna do ragnadocker
+# Fluxo de Funcionamento
 
-Uma característica importante do ragnadocker é que **existem múltiplas cópias do servidor dentro do container**.
+O funcionamento do ambiente segue algumas etapas claras.
 
-Isso foi uma descoberta importante durante o desenvolvimento.
+### 1 — Base limpa
 
-Existem três estados principais:
+A base original do rAthena é baixada para:
 
----
-
-## Template inicial do servidor
-
-
-/datastoresetup/
-
-
-Contém o servidor base utilizado para recriar o ambiente.
+```
+data_base/
+```
 
 ---
 
-## Volume persistente
+### 2 — Criação do ambiente modificável
 
+O script:
 
-/datastore/
+```
+copia-base.sh
+```
 
+copia arquivos necessários para:
 
-Contém dados que persistem entre reinicializações do container.
+```
+data/
+```
 
-Estrutura:
-
-
-etc-apache2
-etc-mysql
-usr-bin-rathena
-var-lib-mysql
-var-www-html
-
+Essa pasta contém os arquivos realmente utilizados pelo servidor.
 
 ---
 
-## Runtime real do servidor
+### 3 — Inicialização do servidor
 
+O ambiente é iniciado com:
 
-/usr/bin/rathena
-
-
-Este é **o diretório realmente executado pelo servidor**.
-
-Descoberta importante:
-
-Alterações feitas em:
-
-
-/datastoresetup
-
-
-não afetam o servidor ativo.
-
-Scripts de automação devem modificar:
-
-
-/usr/bin/rathena
-
+```
+docker compose up -d
+```
 
 ---
 
-# Scripts do Sistema
+### 4 — Geração de mundos
 
-O container possui scripts de gerenciamento do ambiente.
+Um novo mundo pode ser gerado executando:
 
----
-
-## import-athena.sh
-
-Sincroniza dados persistentes para o runtime.
-
-
-datastore → runtime
-
+```
+./new_world.sh minha-seed
+```
 
 ---
 
-## reset-athena.sh
+# Sistema de Seeds
 
-Reconstrói o servidor a partir do template.
-
-
-datastoresetup → runtime
-
-
----
-
-## backup-athena.sh
-
-Cria backup do servidor atual.
-
-
-runtime → datastore
-
-
----
-
-## launch-athena.sh
-
-Inicializa o servidor rAthena.
-
----
-
-# Ferramentas Criadas no Projeto
-
-O projeto inclui ferramentas auxiliares para análise do servidor.
-
----
-
-# cat_python.py
-
-Scanner de arquivos de configuração.
-
-Permite visualizar rapidamente arquivos de configuração do servidor.
+Cada seed representa um mundo diferente.
 
 Exemplo:
 
+```
+./new_world.sh wolfie-maxxer
+```
 
-python3 cat_python.py -f conf/battle/exp.conf
+Essa seed controla:
 
+* randomização de drops
+* randomização de estatísticas
+* randomização de comportamento
+* randomização de spawn
 
-ou
-
-
-python3 cat_python.py
--d /usr/bin/rathena
--f conf/battle/exp.conf conf/battle/feature.conf
-
-
-Modos de operação:
-
-| Opção | Função |
-|-----|-----|
-| -f | mostrar arquivos específicos |
-| -d | definir diretório root |
-| nenhum | modo interativo |
-
-Uso comum:
-
-Verificar se o sistema de PIN está ativo:
-
-
-python3 cat_python.py
--d /usr/bin/rathena
--f conf/char_athena.conf | grep pincode
-
+Isso permite explorar **variações infinitas de mundos Ragnarok**.
 
 ---
 
-# Gerador de Database do Servidor
+# Web Database Automática
 
-Script:
+O projeto inclui um sistema que gera automaticamente uma database navegável do servidor.
 
+A database contém:
 
-build_ro_database.py
+* lista de itens
+* lista de monstros
+* drops
+* spawn de mobs
+* busca rápida
 
+Interface acessível em:
 
-Este script analisa arquivos do servidor e gera uma database navegável.
+```
+http://SEU_IP:8003/database.html
+```
 
-Arquivos gerados:
-
-
-item_info.json
-mob_spawn.json
-map_to_mobs.json
-
-
-Esses dados são utilizados por uma interface web:
-
-
-/var/www/html/database.html
-
-
-Recursos da interface:
-
-- busca por item
-- busca por monstro
-- visualização de drops
-- visualização de spawn
-- autocomplete
+Essa database é gerada diretamente a partir dos arquivos do servidor.
 
 ---
 
-# Modo CASUAL
+# Cliente Web Integrado
 
-Script:
+O ambiente inclui um cliente Ragnarok executável no navegador:
 
+```
+roBrowserLegacy
+```
 
-casual.sh
+Acesso:
 
+```
+http://SEU_IP:8003
+```
 
-Aplica automaticamente um preset de servidor casual.
-
----
-
-## Configurações aplicadas
-
-EXP:
-
-
-base_exp_rate: 33000
-job_exp_rate: 33000
-
-
-Drops:
-
-
-item_rate_common: 1500
-item_rate_heal: 500
-item_rate_equip: 1000
-item_rate_card: 300
-
+Isso permite testar o servidor **sem instalar cliente local**.
 
 ---
 
-## Sistema de PIN
+# Instalação
 
-O sistema de PIN é desativado automaticamente:
+Guia completo em:
 
+```
+docs/install.md
+```
 
-pincode_enabled: no
-pincode_force: no
+Resumo rápido:
 
+```
+git clone <repo>
+cd ragnarok-docker
 
----
+./setup-rathena-data_base-external.sh
+./copia-base.sh
 
-# NPCs Utilitários Ativados
-
-O modo casual ativa automaticamente vários NPCs úteis:
-
-
-warper
-jobmaster
-platinum_skills
-healer
-stylist
-resetnpc
-card_remover
-
+docker compose up -d
+```
 
 ---
 
-# Sistema de Itens Iniciais
+# Ferramentas Incluídas
 
-Script criado:
+O projeto inclui diversas ferramentas auxiliares.
 
+Exemplos:
 
-npc/custom/starter_items.txt
+```
+tools/
+```
 
+Algumas categorias:
 
-Executado em:
+### análise de database
 
+Scripts que analisam:
 
-OnPCLoginEvent
-
-
-Entrega:
-
-
-Red Potion x150
-
-
-apenas uma vez por conta.
-
-Exemplo de script:
-
-
-script Starter_Items -1,{
-
-OnPCLoginEvent:
-if (#starter_items_given) end;
-
-getitem 501,150;
-#starter_items_given = 1;
-
-dispbottom "Você recebeu 150 poções iniciais.";
-
-end;
-
-}
-
+* mob_db
+* item_db
+* spawn de mobs
 
 ---
 
-# Problemas Encontrados Durante Desenvolvimento
+### geração de documentação
 
-Durante a configuração do servidor alguns problemas foram identificados.
+Ferramentas que geram:
 
----
-
-## Problema: configuração alterada não aplicava
-
-Causa:
-
-O servidor utiliza:
-
-
-/usr/bin/rathena
-
-
-Alterações feitas em:
-
-
-/datastoresetup
-
-
-não afetavam o runtime.
+* database web
+* relatórios do servidor
 
 ---
 
-## Problema: erro de sintaxe em scripts_custom.conf
+### randomizers experimentais
 
-Erro:
+Alguns scripts experimentais incluem:
 
-
-Unknown syntax in file 'npc/scripts_custom.conf'
-
-
-Causa:
-
-linha gerada incorretamente:
-
-
-npc/custom/warper.txt
-
-
-Formato correto:
-
-
-npc: npc/custom/warper.txt
-
+* randomização de drops
+* randomização de estatísticas
+* randomização de spawn
+* randomização de AI
 
 ---
 
-# Dockerfile
+# Objetivos de Pesquisa
 
-O container rAthena inclui ferramentas adicionais:
+Este projeto também funciona como um laboratório para explorar ideias de design de jogo.
 
+Alguns experimentos planejados incluem:
 
-git
-zsh
-nano
-vim
-curl
-python3
-
-
-Aliases úteis adicionados:
-
-
-rathena-up
-rathena-down
-rathena-update
-
+* progressão radial de mapas
+* loot procedural
+* cartas com efeitos aleatórios
+* economia dinâmica de drops
+* geração automática de documentação do servidor
 
 ---
 
-# Debugging do Servidor
+# Observações sobre Licença
 
-Alguns comandos úteis para diagnóstico.
+Arquivos originais do rAthena **não são incluídos no repositório**.
 
----
+Eles são baixados automaticamente via script:
 
-Verificar EXP:
+```
+setup-rathena-data_base-external.sh
+```
 
-
-python3 cat_python.py
--f /usr/bin/rathena/conf/battle/exp.conf
-
-
----
-
-Verificar PIN:
-
-
-grep pincode /usr/bin/rathena/conf/char_athena.conf
-
+Isso evita redistribuição direta de arquivos do projeto rAthena.
 
 ---
 
-Verificar NPCs ativos:
+# Status do Projeto
 
+Projeto experimental em desenvolvimento.
 
-grep "npc:" /usr/bin/rathena/npc/scripts_custom.conf
+Objetivos principais atuais:
 
-
----
-
-# Próximos Passos do Projeto
-
-Planejados para evolução do servidor:
-
-- sistema procedural de efeitos de cartas
-- progressão radial de mapas
-- melhoria da database web
-- geração automática de documentação
-- ferramentas avançadas de debugging
+* estabilidade do ambiente Docker
+* melhoria dos randomizers
+* evolução da database web
+* exploração de design procedural em Ragnarok
 
 ---
 
-# Licença
+# Autor
 
-Projeto experimental para estudo de arquitetura e desenvolvimento de servidores Ragnarok baseados em rAthena.
+Projeto desenvolvido como ambiente experimental para estudo de:
+
+* arquitetura de servidores Ragnarok
+* automação de infraestrutura
+* geração procedural de conteúdo
+* engenharia de sistemas para jogos online
