@@ -1,168 +1,88 @@
 # Instalação
 
-Este projeto executa um servidor **Ragnarok Online baseado em rAthena** utilizando **Docker** e permite gerar mundos procedurais através de seeds.
+Este projeto executa um servidor **Ragnarok Online baseado em rAthena** utilizando **Docker** e permite gerar mundos procedurais por seed.
 
----
+## Matriz de compatibilidade (recomendada)
 
-# Requisitos
+| Componente | Versão recomendada |
+| --- | --- |
+| Docker Engine | 24+ |
+| Docker Compose (plugin) | 2.20+ |
+| Python | 3.10+ |
+| Sistema operacional | Ubuntu 22.04+ / Debian 12+ |
+
+## Requisitos
 
 Antes de começar, instale:
 
-* Docker
-* Docker Compose
-* Git
+- Docker
+- Docker Compose
+- Git
+- Python 3
 
 Ubuntu / Debian:
 
 ```bash
-sudo apt install docker.io docker-compose git
+sudo apt update
+sudo apt install -y docker.io docker-compose-plugin git python3
 ```
 
----
-
-# 1. Clonar o repositório
+## 1. Clonar o repositório
 
 ```bash
 git clone https://SEU_REPOSITORIO/ragnarok-docker.git
 cd ragnarok-docker
 ```
 
----
-
-# 2. Baixar a base do rAthena
-
-Por questões de licença e tamanho do repositório, os arquivos originais do rAthena **não são incluídos no git**.
-
-Execute:
+## 2. Baixar a base limpa do rAthena
 
 ```bash
 ./setup-rathena-data_base-external.sh
 ```
 
-Isso irá baixar automaticamente a base limpa em:
-
-```
-data_base/
-```
-
----
-
-# 3. Criar a base local utilizada pelo servidor
-
-Copie os arquivos necessários para o ambiente local:
+## 3. Criar a base local utilizada pelo servidor
 
 ```bash
 ./copia-base.sh
 ```
 
-Isso cria:
+## 4. Validar ambiente
 
+```bash
+make doctor
 ```
-data/
-```
 
-Essa pasta contém os arquivos que serão modificados pelos randomizers.
-
----
-
-# 4. Subir o servidor
+## 5. Subir o servidor
 
 ```bash
 docker compose up -d
 ```
 
-Containers iniciados:
-
-```
-ragnarok-server
-ragnarok-db
-ragnarok-phpmyadmin
-robrowser
-```
-
----
-
-# 5. Acessar o jogo
-
-Cliente Web:
-
-```
-http://SEU_IP:8003
-```
-
-Banco de dados (phpMyAdmin):
-
-```
-http://SEU_IP:8080
-```
-
----
-
-# 6. Gerar um mundo procedural
-
-Para criar um novo mundo usando uma seed:
+## 6. Gerar um mundo procedural
 
 ```bash
-./new_world.sh minha-seed
+./new_world.sh minha-seed --force
 ```
 
-Exemplo:
+> `--force` é obrigatório por segurança, pois a operação recria `data/db`, `data/npc` e `data/conf`.
+
+## 7. Acessos
+
+- Cliente web / database: `http://127.0.0.1:8003`
+- phpMyAdmin: `http://127.0.0.1:8080`
+
+Para expor em rede local, defina no `.env`:
+
+```env
+BIND_IP=0.0.0.0
+```
+
+## Comandos úteis
 
 ```bash
-./new_world.sh wolfie-maxxer
-```
-
-O script irá:
-
-1. Parar o servidor
-2. Restaurar a base limpa
-3. Aplicar os randomizers
-4. Reiniciar o servidor
-
----
-
-# Estrutura do projeto
-
-```
-ragnarok-docker
- ├ data/            # dados modificáveis (gerados)
- ├ data_base/       # base limpa do rAthena
- ├ tools/           # randomizers
- ├ scripts/
- ├ new_world.sh
- ├ copia-base.sh
- ├ docker-compose.yml
- └ docs/
-```
-
----
-
-# Observações
-
-* `data/` não é versionado no git.
-* `data_base/` é baixado automaticamente.
-* Seeds diferentes geram mundos diferentes.
-
----
-
-# Exemplo de fluxo completo
-
-```bash
-git clone https://SEU_REPOSITORIO/ragnarok-docker.git
-cd ragnarok-docker
-
-./setup-rathena-data_base-external.sh
-./copia-base.sh
-
-docker compose up -d
-
-./new_world.sh minha-seed
-```
-
----
-
-# Parar o servidor
-
-```bash
-docker compose down
+make up
+make down
+make world SEED=wolfie-maxxer
+make logs
+make ps
 ```
