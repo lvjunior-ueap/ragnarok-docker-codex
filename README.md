@@ -70,7 +70,7 @@ new_world.sh
 Exemplo:
 
 ```
-./new_world.sh wolfie-maxxer
+./new_world.sh wolfie-maxxer --force
 ```
 
 Esse script executa automaticamente:
@@ -215,7 +215,7 @@ docker compose up -d
 Um novo mundo pode ser gerado executando:
 
 ```
-./new_world.sh minha-seed
+./new_world.sh minha-seed --force
 ```
 
 ---
@@ -227,7 +227,7 @@ Cada seed representa um mundo diferente.
 Exemplo:
 
 ```
-./new_world.sh wolfie-maxxer
+./new_world.sh wolfie-maxxer --force
 ```
 
 Essa seed controla:
@@ -394,3 +394,20 @@ Projeto desenvolvido como ambiente experimental para estudo de:
 * automação de infraestrutura
 * geração procedural de conteúdo
 * engenharia de sistemas para jogos online
+
+
+---
+
+## Operação recomendada
+
+Use os alvos de automação para operar o ambiente:
+
+```bash
+make doctor
+make up
+make world SEED=minha-seed
+make logs
+make down
+```
+
+Cada geração de mundo grava logs em `logs/world/` para rastreabilidade.

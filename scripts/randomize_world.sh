@@ -1,8 +1,27 @@
 #!/bin/bash
 
+set -euo pipefail
+
+if [ ! -f .env.rando ]; then
+    echo "[ERRO] Arquivo .env.rando não encontrado."
+    exit 1
+fi
+
 set -a
 source .env.rando
 set +a
+
+if [ -z "${WORLD_SEED:-}" ]; then
+    echo "[ERRO] WORLD_SEED não definido em .env.rando"
+    exit 1
+fi
+
+for cmd in python3 docker; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+        echo "[ERRO] Dependência ausente: $cmd"
+        exit 1
+    fi
+done
 
 echo "================================"
 echo "Ragnarok World Randomizer"
@@ -16,71 +35,60 @@ export WORLD_SEED_NUMERIC=$NUMERIC_SEED
 echo "Numeric seed: $WORLD_SEED_NUMERIC"
 
 echo "Stopping server..."
-
-docker exec ragnarok-server sh -c "cd /usr/bin/rathena && sh ./athena-start stop" || true
-
-#################################
-# RANDOMIZERS
-#################################
-
-if [ "$ENABLE_RANDOM_DROPS" = true ]; then
-    echo "Randomizing drops..."
-    python3 tools/randomize_drops.py
+if docker ps --format '{{.Names}}' | grep -q '^ragnarok-server$'; then
+    docker exec ragnarok-server sh -c "cd /usr/bin/rathena && sh ./athena-start stop" || true
+else
+    echo "[WARN] Container ragnarok-server não está em execução; seguindo com randomização offline."
 fi
 
-if [ "$ENABLE_RANDOM_STATS" = true ]; then
-    echo "Randomizing stats..."
-    python3 tools/randomize_stats.py
+run_randomizer() {
+    local name="$1"
+    local script="$2"
+    echo "$name..."
+    python3 "$script"
+}
+
+if [ "${ENABLE_RANDOM_DROPS:-false}" = true ]; then
+    run_randomizer "Randomizing drops" tools/randomize_drops.py
 fi
 
-if [ "$ENABLE_RANDOM_AI" = true ]; then
-    echo "Randomizing AI..."
-    python3 tools/randomize_ai.py
+if [ "${ENABLE_RANDOM_STATS:-false}" = true ]; then
+    run_randomizer "Randomizing stats" tools/randomize_stats.py
 fi
 
-if [ "$ENABLE_RANDOM_SHOPS" = true ]; then
-    echo "Randomizing shops..."
-    python3 tools/randomize_shops.py
+if [ "${ENABLE_RANDOM_AI:-false}" = true ]; then
+    run_randomizer "Randomizing AI" tools/randomize_ai.py
 fi
 
-if [ "$ENABLE_RANDOM_SPAWNS" = true ]; then
-    echo "Randomizing spawns..."
-    python3 tools/randomize_spawns.py
+if [ "${ENABLE_RANDOM_SHOPS:-false}" = true ]; then
+    run_randomizer "Randomizing shops" tools/randomize_shops.py
 fi
 
-#################################
-# NEW FEATURES
-#################################
-
-if [ "$ENABLE_RANDOM_AFFIXES" = true ]; then
-    echo "Randomizing equipment affixes..."
-    python3 tools/randomize_affixes.py
+if [ "${ENABLE_RANDOM_SPAWNS:-false}" = true ]; then
+    run_randomizer "Randomizing spawns" tools/randomize_spawns.py
 fi
 
-if [ "$ENABLE_ALLOW_ALL_DROPS" = true ]; then
-    echo "Allowing all items to be dropped..."
-    python3 tools/allow_all_drops.py
+if [ "${ENABLE_RANDOM_AFFIXES:-false}" = true ]; then
+    run_randomizer "Randomizing equipment affixes" tools/randomize_affixes.py
 fi
 
-if [ "$ENABLE_MAGNIFIER_LIGHTER" = true ]; then
-    echo "Fixing Magnifier weight..."
-    python3 tools/magnifier_zero_weight.py
+if [ "${ENABLE_ALLOW_ALL_DROPS:-false}" = true ]; then
+    run_randomizer "Allowing all items to be dropped" tools/allow_all_drops.py
 fi
 
-#################################
-# MOB BUFFS
-#################################
-
-if [ "$ENABLE_RANDOM_MOB_BUFFS" = true ]; then
-    echo "Generating mob buff skills..."
-    python3 tools/generate_mob_buffs.py
+if [ "${ENABLE_MAGNIFIER_LIGHTER:-false}" = true ]; then
+    run_randomizer "Fixing Magnifier weight" tools/magnifier_zero_weight.py
 fi
 
-if [ "$ENABLE_RANDOM_MOB_NAMES" = true ]; then
-    echo "Randomizing monster names..."
-    python3 tools/randomize_mob_names.py
+if [ "${ENABLE_RANDOM_MOB_BUFFS:-false}" = true ]; then
+    run_randomizer "Generating mob buff skills" tools/generate_mob_buffs.py
 fi
 
+if [ "${ENABLE_RANDOM_MOB_NAMES:-false}" = true ]; then
+    run_randomizer "Randomizing monster names" tools/randomize_mob_names.py
+fi
 
+echo "Running sanity checks..."
+python3 scripts/sanity_check_world.py
 
 echo "World generation complete."

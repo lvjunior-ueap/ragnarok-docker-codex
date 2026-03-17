@@ -15,20 +15,27 @@ services:
       - db_data:/var/lib/mysql
       - ./sql-init:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - "${BIND_IP:-127.0.0.1}:3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: ragnarok-phpmyadmin
     restart: always
     ports:
-      - "8080:80"
+      - "${BIND_IP:-127.0.0.1}:8080:80"
     environment:
       PMA_HOST: db
       PMA_USER: root
       PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   rathena:
     build:
@@ -37,18 +44,17 @@ services:
     container_name: ragnarok-server
     restart: unless-stopped
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     ports:
-      - "6900:6900"
-      - "6121:6121"
-      - "5121:5121"
-      - 8003:80
+      - "${BIND_IP:-127.0.0.1}:6900:6900"
+      - "${BIND_IP:-127.0.0.1}:6121:6121"
+      - "${BIND_IP:-127.0.0.1}:5121:5121"
+      - "${BIND_IP:-127.0.0.1}:8003:80"
     volumes:
       - ./data/db:/usr/bin/rathena/db
       - ./data/npc:/usr/bin/rathena/npc
       - ./data/conf:/usr/bin/rathena/conf
-
-
 
   robrowser:
     build: ./docker/robrowser
@@ -57,13 +63,12 @@ services:
     env_file:
       - .env
     ports:
-      - "8001:8080"
-      - "5999:5999"
+      - "${BIND_IP:-127.0.0.1}:8001:8080"
+      - "${BIND_IP:-127.0.0.1}:5999:5999"
     depends_on:
       - rathena
     volumes:
       - ./data:/opt/roBrowserLegacy/data
-
 
 volumes:
   db_data:
